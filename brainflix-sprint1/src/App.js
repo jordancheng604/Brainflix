@@ -1,13 +1,18 @@
 import React from 'react';
 // import './App.css';
-import Header from './components/header/Header.js';
+import Header from './components/header/Header.jsx';
 import logo from '../src/logo.svg';
 import mohan from '../src/assets/images/mohan-muruge.jpg';
+import MainPlayer from './components/main/main-video/main-player/MainPlayer.jsx';
+import Description from './components/main/main-video/description/Description';
+
 
 function App() {
   return (
     <> 
     <Header logo={logo} mohan={mohan}/>
+    <MainPlayer/>
+    <Description/>
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}

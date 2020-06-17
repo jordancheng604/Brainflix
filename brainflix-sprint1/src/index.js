@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './styles/styles.css';
-import './components/header/header.scss'
+import './components/header/header.scss';
+import './components/main/main-video/main-player/mainPlayer.scss';
 
 ReactDOM.render(
   <React.StrictMode>

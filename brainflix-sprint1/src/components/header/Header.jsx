@@ -8,9 +8,9 @@ function Header(props){
         <img src={props.logo} alt='BrainFlix Logo'/>
         </div>
         <div className="header__rightSide">
-            <input type='text' className="textSearchBox"/>Search
-            <button className="uploadButton">+ UPLOAD</button>
-            <img src={props.mohan} className="avatar" alt='mohan'/>
+            <input type='text' className="header__textSearchBox"/>
+            <button className="header__uploadButton">+ UPLOAD</button>
+            <img src={props.mohan} className="header__avatar" alt='mohan'/>
         </div>
         </header>
     )
