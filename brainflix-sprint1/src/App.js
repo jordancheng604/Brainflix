@@ -10,13 +10,44 @@ import Comments from './components/main/main-video/comments/Comments';
 import SideVideo from './components/main/side-video/SideVideo';
 import Data from './Data.json';
 import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios';
+import axios from 'axios';
 
+// function Data (){
+//   fetch('./data.json')
+//   .then(response => {
+//     return response.json()
+//   })
+//   .then(data => {
+//     // Work with JSON data here
+//     console.log(data)
+//   })
+//   .catch(err => {
+//     // Do something for an error here
+//   })
+// }
+
+
+// function GetStuff (){
+//   axios.get(http://localhost:3000/Data.json)
+//   .then()
+//   .catch(error => console.log(error));
+
+// }
 
 
 function App() {
-  return (
-    <> 
-    
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     // Data.map()
+  //   }
+  // }
+
+  
+      return (
+    <div> 
+    {/* <Data/> */}
     <Header logo={logo} mohan={mohan}/>
     <MainPlayer/>
     <Description/>
@@ -38,8 +69,9 @@ function App() {
         </a> */}
       </header>
     </div>
-    </>
+    </div>
   );
+      
 }
 
 export default App;
