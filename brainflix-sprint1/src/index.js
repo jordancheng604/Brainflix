@@ -9,7 +9,7 @@ import './components/main/main-video/main-player/mainPlayer.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
