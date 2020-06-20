@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios'
-
 // import appStyles from './styles/app';
 // import './App.css';
 import Header from './components/header/Header.jsx';
@@ -42,11 +41,15 @@ class App extends React.Component {
   // constructor(props) {
   //   super(props);
 
-  //   this.state = {
-  //     // Data.map()
-  //   }
+    // this.state = {
+    //   // Data.map()
+    // }
+  // }
+  // commcomm = () => {
+  //   this.setState()
   // }
   componentDidMount(){
+    console.log('It is working =)')
     axios
     .get('/Data.json')
     .then(res=>this.setState({Data: res.data}))
@@ -59,8 +62,11 @@ class App extends React.Component {
     <Header logo={logo} mohan={mohan}/>
     <MainPlayer/>
     <Description/>
-    <Comments commentsSection={this.state.data}/>
-    <SideVideo sideVids={this.state.data}/>
+    
+    {/* <Comments/> */}
+    <Comments commentsSection={this.state.Data}/>
+    
+    <SideVideo sideVids={this.state.Data}/>
     <div className="App">
       <header className="App-header">
 

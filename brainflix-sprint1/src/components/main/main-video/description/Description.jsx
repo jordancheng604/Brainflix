@@ -5,8 +5,8 @@ function Description() {
     return(
         <section className="describe">
         <div className="describe__title">
-            <h1>DESCRIPTION. SECTION</h1>
-            BMX Rampage: 2018 Highlights</div>
+            <h1>BMX Rampage: 2018 Highlights</h1>
+           </div>
         <span className="describe__author"> AUTHOR </span>
         <span className="describe__date"> DATE </span>
         <span className="describe__views"> VIEWS </span>

@@ -10,19 +10,21 @@ export default function Comments({commentsSection}){
                 <input type="text" className="comments_input"></input>
                 <button className="comments__button">COMMENT</button>
             </div>
-
+            <h5>3 Comments</h5>
+            
             <ul className="comments__secCard">
-                <h5>3 Comments</h5>
-            {commentsSection.map(comm => 
-            <li className="comments__card" key={comm.id}>
-            <img className="comments__image" alt="User Avatar" src={comm.image}/>
-            <span className="comments__usrName">{comm.name}</span>
-            <span className="comments__date">{comm.date}</span>
-            <div className="comments__commment">{comm.comment}</div>
+        
+            {/* {commentsSection.map(commsec => 
+            <li className="comments__card" key={commsec.id}>
+            <img className="comments__image" alt="User Avatar" src={commsec.image}/>
+            <span className="comments__usrName">{commsec.name}</span>
+            <span className="comments__date">{commsec.date}</span>
+            <div className="comments__commment">{commsec.comment}</div>
             </li>
-            )}
+            )} */}
+            
             </ul>
-           
+            
         </section>
     )
 }

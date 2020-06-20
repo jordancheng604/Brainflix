@@ -1,17 +1,17 @@
 import React from 'react';
-import './SideVideo.scss'
+// import './SideVideo.scss'
 
 export default function SideVideo({sideVids}) {
     return(
+
+
         <ul className="SideVideo">
+            {/* {sideVids.map(sideVid => <li>{sideVid.name}</li>)} */}
             <h5 className="SideVideo__sectionTitle" >NEXT VIDEO</h5>
-            {sideVids.map(videoList => 
-            <li className="SideVideo__card" key={videoList.id}>
-            <img className="SideVideo__image" src={videoList.image} alt='thumbnail to indicate video'/>
-            <div className="SideVideo__title" >{videoList.title}</div>
-            <div className="SideVideo__author" >{videoList.channel}</div>
+            {sideVids.map(vidList => <li className="SideVideo__card" key={vidList.id}><img className="SideVideo__image" src={vidList.image} alt='thumbnail to indicate video'/><div className="SideVideo__title" >{vidList.title}</div>
+            <div className="SideVideo__author" >{vidList.channel}</div>
             </li>
-            )}
+            ).slice(0,8)}
         </ul>
     )
    

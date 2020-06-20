@@ -1,0 +1,32 @@
+.describe{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    &__title{
+        font-weight: bolder;
+
+    }
+
+    &__author{
+        font-weight: bolder;
+    }
+
+    &__date{
+        color: gray;
+    }
+
+    &__views{
+        border: 3px solid lightgreen;
+    }
+
+    &__likes{
+        border: 3px solid lightpink;
+
+    }
+
+    &__long{
+        border: 3px solid lightskyblue;
+
+    }
+}
