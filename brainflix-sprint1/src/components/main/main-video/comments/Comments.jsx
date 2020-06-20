@@ -11,17 +11,16 @@ export default function Comments({commentsSection}){
                 <button className="comments__button">COMMENT</button>
             </div>
             <h5>3 Comments</h5>
-            
-            <ul className="comments__secCard">
-        
-            {/* {commentsSection.map(commsec => 
+
+            <ul className="comments__secCards">
+            {commentsSection.splice(9,3).map(commsec => 
             <li className="comments__card" key={commsec.id}>
             <img className="comments__image" alt="User Avatar" src={commsec.image}/>
             <span className="comments__usrName">{commsec.name}</span>
             <span className="comments__date">{commsec.date}</span>
             <div className="comments__commment">{commsec.comment}</div>
             </li>
-            )} */}
+            )}
             
             </ul>
             

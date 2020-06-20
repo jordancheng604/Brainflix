@@ -1,4 +1,18 @@
 .comments{
     display: flex;
     flex-direction: column;
+    
+
+    &__image{
+        min-width: 3rem;
+        min-height: 3rem;
+        max-width: 3.001rem;
+        max-height: 3.001rem;
+        border-radius: 55%;
+        background-color: gray;
+    }
+
+    &__usrName{
+        font-weight: bolder;
+    }
 }
