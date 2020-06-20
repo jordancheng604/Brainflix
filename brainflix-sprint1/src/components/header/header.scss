@@ -1,6 +1,7 @@
 .header{
     display: flex;
     flex-direction: column;
+    align-content: center;
     // justify-content: space-evenly;
     // background-color: lightpink;
     width: 100%;
@@ -27,8 +28,8 @@
     width: 18rem;
     height: 1rem;
     align-self: center;
-    border-color: #e1e1e1;
-    background-color: #e1e1e1;
+    border-color: #FAFAFA;
+    background-color: #FAFAFA;
     }
 
     &__uploadButton{
@@ -39,6 +40,7 @@
     background-color: #0095ff;
     border: none;
     border-radius: 5px;
+    font-weight: bolder;
     }
 
     
