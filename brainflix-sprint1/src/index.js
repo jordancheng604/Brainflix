@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import './styles/styles.css';
 import './components/header/header.scss';
 import './components/main/main-video/main-player/mainPlayer.scss';
+import './components/main/main-video/comments/comments.scss';
+import './components/main/side-video/SideVideo.scss';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -47,7 +47,6 @@ class App extends React.Component {
   //   }
   // }
   componentDidMount(){
-    console.log("It's working... =)")
     axios
     .get('/Data.json')
     .then(res=>this.setState({Data: res.data}))
@@ -60,8 +59,8 @@ class App extends React.Component {
     <Header logo={logo} mohan={mohan}/>
     <MainPlayer/>
     <Description/>
-    <Comments/>
-    <SideVideo sideVids={this.state.Data}/>
+    <Comments commentsSection={this.state.data}/>
+    <SideVideo sideVids={this.state.data}/>
     <div className="App">
       <header className="App-header">
 
