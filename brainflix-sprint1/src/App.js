@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios'
+
 // import appStyles from './styles/app';
 // import './App.css';
 import Header from './components/header/Header.jsx';
@@ -8,9 +10,8 @@ import MainPlayer from './components/main/main-video/main-player/MainPlayer.jsx'
 import Description from './components/main/main-video/description/Description';
 import Comments from './components/main/main-video/comments/Comments';
 import SideVideo from './components/main/side-video/SideVideo';
-import Data from './Data.json';
-import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios';
-import axios from 'axios';
+// import Data from './Data.json';
+// import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios';
 
 // function Data (){
 //   fetch('./data.json')
@@ -34,8 +35,10 @@ import axios from 'axios';
 
 // }
 
-
-function App() {
+class App extends React.Component {
+  state = {
+    Data: []
+  }
   // constructor(props) {
   //   super(props);
 
@@ -43,8 +46,14 @@ function App() {
   //     // Data.map()
   //   }
   // }
+  componentDidMount(){
+    console.log("It's working... =)")
+    axios
+    .get('/Data.json')
+    .then(res=>this.setState({Data: res.data}))
+  }
 
-  
+  render() {
       return (
     <div> 
     {/* <Data/> */}
@@ -52,26 +61,15 @@ function App() {
     <MainPlayer/>
     <Description/>
     <Comments/>
-    <SideVideo/>
+    <SideVideo sideVids={this.state.Data}/>
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+
       </header>
     </div>
     </div>
   );
-      
+}    
 }
 
 export default App;
