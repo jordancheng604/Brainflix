@@ -60,8 +60,8 @@ class App extends React.Component {
     <div> 
     {/* <Data/> */}
     <Header logo={logo} mohan={mohan}/>
-    <MainPlayer/>
-    <Description/>
+    <MainPlayer mainplay={this.state.Data}/>
+    <Description explain={this.state.Data}/>
     
     {/* <Comments/> */}
     <Comments commentsSection={this.state.Data}/>

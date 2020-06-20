@@ -1,5 +1,24 @@
 .mainPlayer{
-    background-color: gray;
+    // background-color: black;
     width: 100%;
-    height: 15rem;
+    height: 12rem;
+    // border: 3px dotted greenyellow;
+
+
+    &__video{
+        width: 100%;
+        height: 12rem;
+        margin: 0rem;
+        padding: 0rem;
+    }
+
+    &__controls{
+        display:flex;
+        flex-direction: row;
+    }
+
+    &__play{
+        width: 25rem;
+        height: 25rem;
+    }
 }

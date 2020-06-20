@@ -13,7 +13,7 @@ export default function Comments({commentsSection}){
             <h5>3 Comments</h5>
 
             <ul className="comments__secCards">
-            {commentsSection.splice(9,3).map(commsec => 
+            {commentsSection.splice(8,3).map(commsec => 
             <li className="comments__card" key={commsec.id}>
             <img className="comments__image" alt="User Avatar" src={commsec.image}/>
             <span className="comments__usrName">{commsec.name}</span>

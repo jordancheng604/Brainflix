@@ -8,7 +8,9 @@ export default function SideVideo({sideVids}) {
         <ul className="SideVideo">
             {/* {sideVids.map(sideVid => <li>{sideVid.name}</li>)} */}
             <h5 className="SideVideo__sectionTitle" >NEXT VIDEO</h5>
-            {sideVids.map(vidList => <li className="SideVideo__card" key={vidList.id}><img className="SideVideo__image" src={vidList.image} alt='thumbnail to indicate video'/><div className="SideVideo__title" >{vidList.title}</div>
+            {sideVids.map(vidList => <li className="SideVideo__card" key={vidList.id}>
+                <img className="SideVideo__image" src={vidList.image} alt='thumbnail to indicate video'/>
+                <div className="SideVideo__title" >{vidList.title}</div>
             <div className="SideVideo__author" >{vidList.channel}</div>
             </li>
             ).slice(0,8)}
