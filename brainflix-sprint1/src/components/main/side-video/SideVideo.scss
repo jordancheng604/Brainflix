@@ -1,27 +1,38 @@
+@import '../../../styles/appStylz.scss';
 .SideVideo{
 display: flex;
 flex-direction: column;
-width: 100%;
+align-content: center;
+justify-content: center;
+width: 95%;
+list-style: none;
+padding: 0rem;
 
 &__sectionTitle{
-    margin: 0rem;
+    margin: 0rem 1rem 3rem 1rem;
     padding: 0rem;
     text-align: left;
     display: flex;
     align-self: flex-start;
+    color: #afafaf;
 }
 
 &__card{
     width: 100%;
+    padding: 0rem;
+    margin: 0rem 1rem 1rem 1rem;
+    list-style: none;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    
+    // flex-wrap: wrap;
+    border: 0.5px dashed brown;
+
 }
 
 &__image{
-    max-width: 5rem;
-    max-height: 5rem;
+    width: 7.7rem;
+    height: 4.8rem;
+    border-radius: 5px;
 }
 
 &__title{
