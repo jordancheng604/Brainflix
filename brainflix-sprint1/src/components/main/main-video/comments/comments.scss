@@ -29,7 +29,7 @@
         flex-wrap: wrap;
         align-self: center;
         border-bottom: 1.2px solid #e1e1e1;
-        padding: 0rem 0rem 1rem 0rem;
+        padding: 0rem 0rem 1.5rem 0rem;
     }
 
     &__image{
@@ -38,7 +38,7 @@
         max-width: 3.001rem;
         max-height: 3.001rem;
         border-radius: 55%;
-        background-color: gray;
+        background-color: #e1e1e1;
         margin: 0rem 1rem 1rem 0.5rem;
     }
 
@@ -70,11 +70,66 @@
     }
 
     &__secCards{
-        width: 95%;
-        border: 1px solid lightblue;
+        list-style: none;
+        width: 97%;
+        // border: 1px solid lightblue;
+        margin: 0.5rem 0rem 0rem 0rem;
+        padding: 0rem 1rem 0rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        
+    }
+
+    &__card{
+        border: 0.1px dashed lightcoral;
+        margin: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    &__image2{
+        background-color: #e1e1e1;
+        min-width: 2.4rem;
+        min-height: 2.4rem;
+        max-width: 1rem; 
+        max-height: 1rem;
+        border-radius: 55%;
+        margin: 0rem 0.5rem 0rem 0rem;
     }
 
     &__usrName{
         font-weight: bolder;
+        margin: 0rem 1rem 0rem 0rem;
+        font-size: 0.9rem;
+    }
+
+    &__date{
+        color: #AFAFAF;
+        display: flex;
+        justify-self: flex-end;
+        // align-self: flex-end;
+        border: 1px dotted brown;
+        height: 1rem;
+        width: 30%;
+        
+        // margin: 0rem 0rem 0rem 2rem;
+        
+    }
+
+    &__commMent{
+        // border: 0.5px solid lightsalmon;
+        width: 15rem;
+        display: flex;
+        justify-self: flex-end;
+        align-self: flex-end;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        border-bottom: 1.2px solid #e1e1e1;
+        padding: 0rem 0rem 1rem 3rem;
+
     }
 }

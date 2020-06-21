@@ -36,10 +36,10 @@ export default function Comments({commentsSection}){
             <ul className="comments__secCards">
             {commentsSection.slice(9).map(commsec => 
             <li className="comments__card" key={commsec.id}>
-            <img className="comments__image" alt="" src={commsec.image}/>
+            <img className="comments__image2" alt="" src={commsec.image}/>
             <span className="comments__usrName">{commsec.name}</span>
             <span className="comments__date">{commsec.date}</span>
-            <div className="comments__commment">{commsec.comment}</div>
+            <div className="comments__commMent">{commsec.comment}</div>
             </li>
             ).slice(0,3)}
             
