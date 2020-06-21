@@ -7,6 +7,7 @@ export default function Description({explain}) {
         <section className="describe">
             {explain.slice(7).map(expDesc => <div><h1 className='describe__title' key={expDesc.id}>
             {expDesc.title}</h1>
+            <div className="describe__authToLksContain">
             <span className="describe__authDate">
             <span className="describe__author">{expDesc.channel}</span>
             <span className="describe__date"> {expDesc.timestamp} </span>
@@ -23,9 +24,10 @@ export default function Description({explain}) {
             <span className="describe__likes"> {expDesc.likes} </span>
             </span>
             </span>
-            
+            </div>
+            <div className="describe__longContainr">
             <span className="describe__long">{expDesc.description}</span>
-
+            </div>
 
             </div> ).slice(1,2)}
 

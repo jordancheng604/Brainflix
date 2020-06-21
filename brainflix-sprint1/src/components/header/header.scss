@@ -66,7 +66,7 @@
     border-radius: 5px;
 
     @include tablet{
-        margin: 1rem 0rem 0rem 0rem;
+        margin: 1.6rem 0rem 0rem 0rem;
         width: 30rem;
     }
     }
@@ -85,7 +85,7 @@
             // border: 3px solid blue;
             width: 35rem;
             height: 3rem;
-            margin: 1rem 0rem 1rem 0rem;
+            margin: 1.6rem 0rem 1rem 0rem;
         }
 
         @include desktop{

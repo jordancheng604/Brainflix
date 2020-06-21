@@ -9,17 +9,44 @@
     flex-wrap: wrap;
     width: 95%;
     margin: 0rem 1rem 0rem 1rem;
-
+    padding: 0rem;
+    // border: 1px dashed lightskyblue;
 
     &__title{
         font-weight: bolder;
         font-size: 1.7rem;
+
+        @include tablet{
+            font-weight: bolder;
+            font-size: 2.2rem;
+            margin: 2.3rem 1rem 0rem 0rem;
+            padding: 0rem;
+        }
+    }
+
+    &__authToLksContain{
+        // border: 1px solid yellow;
+        @include tablet{
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid #e1e1e1;
+
+        }
     }
 
     &__authDate{
         width: 100%;
-        border: 1px dotted lightslategray;
+        // border: 1px dotted lightslategray;
         margin: 0rem 6.9rem 1rem 0rem;
+
+        @include tablet{
+            margin: 1rem 1rem 1rem 0rem;
+            width: 45%;
+            // border: 1px solid lightskyblue
+        }
     }
     &__author{
         font-weight: bolder;
@@ -39,6 +66,16 @@
         // align-self: flex-start;
         flex-direction: row;
         align-content: flex-end;
+
+        @include tablet{
+            width: 45%;
+            // border: 1px solid lightgreen;
+            border-bottom: none;
+            margin: 1rem 0rem 1rem 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
     }
 
     &__eyeBall{
@@ -68,6 +105,24 @@
         font-weight: normal;
         font-size: 0.8rem;
         line-height: 1rem;
+
+        @include tablet{
+            // border: 1px dashed salmon;
+            width: 9rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    &__longContainr{
+        // border: 1px solid purple;
+
+        @include tablet{
+            height: 9rem;
+            width: 67.5%;
+            // margin: 0;
+            margin: 2rem 0rem 0rem 0rem;
+
+        }
     }
     
 }
