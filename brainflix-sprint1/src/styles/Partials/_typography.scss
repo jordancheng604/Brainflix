@@ -1,11 +1,10 @@
 @font-face {
-    font-family: Avenir;
+    font-family: "Avenir";
     src: url("/Assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf");
 
-    font-family: Roboto;
-    src: url(/Assets/Roboto/Roboto-Regular.ttf);
-
-    font-family: sans-serif;
-
-
 }  
+
+@font-face{
+    font-family: "Roboto";
+    src: url("/src/assets/_GlobalFont/Roboto/Roboto-Regular.ttf");
+}

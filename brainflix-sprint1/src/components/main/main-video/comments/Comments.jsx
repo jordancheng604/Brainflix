@@ -23,12 +23,12 @@ export default function Comments({commentsSection}){
                 
 
                
-            <h5>3 Comments</h5>
-            <h5>JOIN THE CONVERSATION</h5>
-            <div className="comments__status">
+            <h5 className="comments__commStat">3 Comments</h5>
+            <h5 className="comments__joinConvo" >JOIN THE CONVERSATION</h5>
+            <div className="comments__addComm">
                 {commentsSection.slice(12).map(commAdd => <img className="comments__image" src={commAdd.image} alt=""></img>
                 ).slice(0)}
-             <textarea type="text" rows='5' placeholder="Write comment here" className="comments__input">
+             <textarea type="text" rows='4' placeholder="Write comment here" className="comments__input">
                 
                 </textarea>
                 <button className="comments__button">COMMENT</button>

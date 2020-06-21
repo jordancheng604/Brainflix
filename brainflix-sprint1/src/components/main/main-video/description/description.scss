@@ -4,33 +4,68 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0rem 1rem 0rem 1rem;
+
 
     &__title{
         font-weight: bolder;
-
+        font-size: 1.7rem;
     }
 
+    &__authDate{
+        width: 100%;
+        border: 1px dotted lightslategray;
+        margin: 0rem 6.9rem 1rem 0rem;
+    }
     &__author{
         font-weight: bolder;
+        margin: 0rem 0.5rem 0rem 0rem;
     }
 
     &__date{
         color: gray;
     }
 
+    &__viewLike{
+        width: 100%;
+        border-bottom: 1px solid #e1e1e1;
+        margin: 1.5rem 6.9rem 1rem 0rem;
+        padding: 0rem  0rem 1.3rem 0rem;
+        display: flex;
+        // align-self: flex-start;
+        flex-direction: row;
+        align-content: flex-end;
+    }
+
+    &__eyeBall{
+        margin: 0rem 0.5rem 0rem 0rem;
+    }
+
     &__views{
         // border: 3px solid lightgreen;
         width:5rem;
+        margin: 0rem 0.9rem 0rem 0rem;
     }
 
+    &__heartHeart{
+        margin: 0rem 0.5rem 0rem 1rem;
+    }
     &__likes{
         // border: 3px solid lightpink;
         width:5rem;
+        // margin: 0rem 0rem 0rem 0rem;
+        // padding: 0rem 0rem 1rem 0rem;
     }
 
     &__long{
         // border: 3px solid lightskyblue;
-        width: 15rem;
+        width: 100%;
+
+        font-weight: normal;
+        font-size: 0.8rem;
+        line-height: 1rem;
     }
+    
 }
