@@ -1,45 +1,47 @@
-// @import 'mixins';
-// @import 'typography';
-@font-face {
-    font-family: "Avenir";
-    src: url("../assets/_GlobalFont/AvenirNextProLT/avenirRegular.otf");
+@import './Partials//mixins';
+@import './Partials//typography';
+@import './Partials//variables';
 
-    font-family: sans-serif;
+// @font-face {
+//     font-family: "Avenir";
+//     src: url("../assets/_GlobalFont/AvenirNextProLT/avenirRegular.otf");
 
-}
+//     font-family: sans-serif;
 
-$mobile-breakpoint: 320px;
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1200px;
+// }
 
-@mixin mobile {
-    @media (min-width: $mobile-breakpoint) {
-        @content;
-    }
-}
+// $mobile-breakpoint: 320px;
+// $tablet-breakpoint: 768px;
+// $desktop-breakpoint: 1200px;
 
-@mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
+// @mixin mobile {
+//     @media (min-width: $mobile-breakpoint) {
+//         @content;
+//     }
+// }
+
+// @mixin tablet {
+//     @media (min-width: $tablet-breakpoint) {
+//         @content;
         
-    }
-}
+//     }
+// }
 
-@mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
-}
+// @mixin desktop {
+//     @media (min-width: $desktop-breakpoint) {
+//         @content;
+//     }
+// }
 
-@mixin photos {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
+// @mixin photos {
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: 100%;
+// }
 
 
 html{
-    // font-weight: lighter;
+    font-weight: normal;
     font-family: "Avenir", sans-serif;
 
 }

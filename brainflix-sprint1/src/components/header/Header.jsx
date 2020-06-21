@@ -10,9 +10,9 @@ function Header(props){
         <input type='text' className="header__textSearchBox" placeholder="Search"/>
         <div className="header__rightSide">
            
-            <img src="" alt=''/>
+            {/* <img src="" alt=''/> */}
 
-            <button className="header__uploadButton"><img src={props.upPlus} alt=''/> UPLOAD</button>
+            <button className="header__uploadButton"><img src={props.upPlus} alt=''/>  UPLOAD</button>
             <img src={props.mohan} className="header__avatar" alt='mohan'/>
         </div>
         </header>
