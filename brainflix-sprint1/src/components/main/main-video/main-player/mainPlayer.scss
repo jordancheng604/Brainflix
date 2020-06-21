@@ -1,18 +1,27 @@
 @import '../../../../styles/appStylz.scss';
 
 .mainPlayer{
-    background-color: black;
     width: 100%;
     height: 100%;
     // border: 3px dashed greenyellow;
     margin: 2rem 0rem 0rem 0rem;
 
+    @include tablet{
+        // height: 25rem;
+    }
+
     &__video{
         width: 100%;
-        height: 11.5rem;
+        height: 12.5rem;
         margin: 0rem;
         padding: 0rem;
         margin: 0rem 0rem 0rem 0rem;
+        background-color: black;
+
+        @include tablet{
+            height: 24.5rem;
+        }
+
     }
 
     &__controls{
