@@ -11,6 +11,7 @@ import MainPlayer from './components/main/main-video/main-player/MainPlayer.jsx'
 import Description from './components/main/main-video/description/Description';
 import Comments from './components/main/main-video/comments/Comments';
 import SideVideo from './components/main/side-video/SideVideo';
+import appStylz from './styles/appStylz.scss'
 // import Data from './Data.json';
 // import { AxiosProvider, Request, Get, Delete, Head, Post, Put, Patch, withAxios } from 'react-axios';
 

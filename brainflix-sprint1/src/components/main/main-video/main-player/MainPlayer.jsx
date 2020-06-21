@@ -1,11 +1,15 @@
 import React from 'react';
 import playLogo from '../../../../assets/icons/SVG/Icon-play.svg';
-import testIMG from '../../../../assets/images/mohan.jpg';
+import scrubScurb from '../../../../assets/icons/SVG/Icon-scrubber-control.svg'
+import fullscreen from '../../../../assets/icons/SVG/Icon-fullscreen.svg'
+import speaker from '../../../../assets/icons/SVG/Icon-volume.svg'
+// import testIMG from '../../../../assets/images/mohan.jpg';
 
 export default function MainPlayer ({mainplay}) {
     return(
         <section className='mainPlayer'>
             <img className='mainPlayer__play' alt="" src={playLogo}/>
+            <img className='mainPlayer__scrubBar' src={scrubScurb} alt=""/>
             {/* <video src={props.main} className='main__video' alt='Main Video'/> */}
             {mainplay.slice(8).map(mainplayervid => <video src="" poster={mainplayervid.image} className='mainPlayer__video' alt='Main Video'key={mainplayervid.id}>
             {/* <img className='mainPlayer__testIMG' alt="" src={testIMG}/> */}
@@ -16,7 +20,9 @@ export default function MainPlayer ({mainplay}) {
             {/* <img className='mainPlayer__testIMG' alt="" src={testIMG}/> */}
             
 
-            <span className='mainPlayer__scrubBar'></span>
+            {/* <span className='mainPlayer__scrubBar'> </span> */}
+              
+           
             <img src="" alt=""/>
             <span className='mainPlayer__rightSide'> 
             <span className='mainPlayer__fullScreen'></span>
