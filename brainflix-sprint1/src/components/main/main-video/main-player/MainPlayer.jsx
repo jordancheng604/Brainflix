@@ -8,12 +8,15 @@ import speaker from '../../../../assets/icons/SVG/Icon-volume.svg'
 export default function MainPlayer ({mainplay}) {
     return(
         <section className='mainPlayer'>
-            <img className='mainPlayer__play' alt="" src={playLogo}/>
-            <img className='mainPlayer__scrubBar' src={scrubScurb} alt=""/>
+            {/* <img className='mainPlayer__play' alt="" src={playLogo}/>
+            <img className='mainPlayer__scrubBar' src={scrubScurb} alt=""/> */}
             {/* <video src={props.main} className='main__video' alt='Main Video'/> */}
-            {mainplay.slice(8).map(mainplayervid => <video src="" poster={mainplayervid.image} className='mainPlayer__video' alt='Main Video'key={mainplayervid.id}>
+            {mainplay.slice(8).map(mainplayervid => <video controls src="" poster={mainplayervid.image}className='mainPlayer__video' alt='Main Video' key={mainplayervid.id}>
             {/* <img className='mainPlayer__testIMG' alt="" src={testIMG}/> */}
-            
+            {/* poster={mainplayervid.image}  */}
+            <source src="" type=""></source>
+            <poster src={mainplayervid.image}></poster>
+
             </video>).slice(0,1)}
             <div className='mainPlayer__controls'>
             {/* <span className='main__play'>*/}
