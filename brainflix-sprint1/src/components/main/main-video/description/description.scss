@@ -1,4 +1,6 @@
 .describe{
+            // border: 3px solid lightskyblue;
+
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -18,17 +20,17 @@
     }
 
     &__views{
-        border: 3px solid lightgreen;
+        // border: 3px solid lightgreen;
         width:5rem;
     }
 
     &__likes{
-        border: 3px solid lightpink;
+        // border: 3px solid lightpink;
         width:5rem;
     }
 
     &__long{
-        border: 3px solid lightskyblue;
+        // border: 3px solid lightskyblue;
         width: 15rem;
     }
 }

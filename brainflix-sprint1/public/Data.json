@@ -97,7 +97,7 @@
     "id": "mohan", 
     "title": "test-mohan", 
     "channel": "mohan", 
-    "imageM": "./images/mohan.jpg"
+    "image": "./images/mohan.jpg"
 }
 
 ]   

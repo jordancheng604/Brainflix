@@ -5,18 +5,19 @@ import testIMG from '../../../../assets/images/mohan.jpg';
 export default function MainPlayer ({mainplay}) {
     return(
         <section className='mainPlayer'>
+            <img className='mainPlayer__play' alt="" src={playLogo}/>
             {/* <video src={props.main} className='main__video' alt='Main Video'/> */}
-            {mainplay.slice(8).map(mainplayervid => <video src={mainplayervid.image} poster={mainplayervid.image} className='mainPlayer__video' alt='Main Video'key={mainplayervid.id}>
+            {mainplay.slice(8).map(mainplayervid => <video src="" poster={mainplayervid.image} className='mainPlayer__video' alt='Main Video'key={mainplayervid.id}>
             {/* <img className='mainPlayer__testIMG' alt="" src={testIMG}/> */}
             
-            </video>)}
+            </video>).slice(0,1)}
             <div className='mainPlayer__controls'>
-            {/* <span className='main__play'>             */}
-            <img className='mainPlayer__testIMG' alt="" src={testIMG}/>
-            <img className='mainPlayer__play' alt="" src={playLogo}/>
+            {/* <span className='main__play'>*/}
+            {/* <img className='mainPlayer__testIMG' alt="" src={testIMG}/> */}
+            
 
             <span className='mainPlayer__scrubBar'></span>
-            <img src=""/>
+            <img src="" alt=""/>
             <span className='mainPlayer__rightSide'> 
             <span className='mainPlayer__fullScreen'></span>
             <span className='mainPlayer__volume'></span>
@@ -44,6 +45,7 @@ export default function MainPlayer ({mainplay}) {
 
 
         </section>
+       
     )
 }
 

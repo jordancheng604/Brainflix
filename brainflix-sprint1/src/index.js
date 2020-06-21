@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './styles/styles.css';
+// import './styles/app.scss'
 import './components/header/header.scss';
 import './components/main/main-video/main-player/mainPlayer.scss';
 import './components/main/main-video/comments/comments.scss';

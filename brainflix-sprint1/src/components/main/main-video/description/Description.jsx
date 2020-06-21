@@ -1,5 +1,6 @@
 import React from 'react';
-
+import eyeView from '../../../../assets/icons/PNG/Icon-views.png';
+import heartLike from '../../../../assets/icons/PNG/Icon-likes.png';
 
 export default function Description({explain}) {
     return(
@@ -8,7 +9,18 @@ export default function Description({explain}) {
             {expDesc.title}</h1>
             <span className="describe__author">{expDesc.channel}</span>
             <span className="describe__date"> {expDesc.timestamp} </span>
-            <span className="describe__views"> {expDesc.views} </span><span className="describe__likes"> {expDesc.likes} </span><span className="describe__long">{expDesc.description}</span>
+
+            <span>
+            <img src={eyeView} alt=''/>
+            <span className="describe__views"> {expDesc.views} </span>
+            </span>
+
+            <span>
+            <img src={heartLike} alt=''/>
+            <span className="describe__likes"> {expDesc.likes} </span>
+            </span>
+            
+            <span className="describe__long">{expDesc.description}</span>
             </div> ).slice(1,2)}
 
 
