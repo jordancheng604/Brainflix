@@ -12,6 +12,27 @@
         background-color: gray;
     }
 
+    &__input{
+        background-color: #FAFAFA;
+        // border-color: #AFAFAF;
+        border: 2px solid #AFAFAF;
+        border-radius: 5px;
+        color: black;
+
+    }
+
+    &__button{
+        background-color: #0095ff;
+        color: white;
+        font-weight: bolder;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        width: 15rem;
+        height: 3.3rem;
+        
+    }
+
     &__usrName{
         font-weight: bolder;
     }

@@ -4,12 +4,12 @@ import React from 'react';
 export default function Description({explain}) {
     return(
         <section className="describe">
-            {explain.map(expDesc => <div><h1 className='describe__title' key={expDesc.id}>
+            {explain.slice(7).map(expDesc => <div><h1 className='describe__title' key={expDesc.id}>
             {expDesc.title}</h1>
             <span className="describe__author">{expDesc.channel}</span>
             <span className="describe__date"> {expDesc.timestamp} </span>
             <span className="describe__views"> {expDesc.views} </span><span className="describe__likes"> {expDesc.likes} </span><span className="describe__long">{expDesc.description}</span>
-            </div> ).splice(8,1)}
+            </div> ).slice(1,2)}
 
 
 

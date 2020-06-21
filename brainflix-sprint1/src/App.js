@@ -5,6 +5,8 @@ import axios from 'axios'
 import Header from './components/header/Header.jsx';
 import logo from '../src/logo.svg';
 import mohan from '../src/assets/images/mohan.jpg';
+import magGlass from '../src/assets/icons/PNG/Icon-search.png'
+import upPlus from '../src/assets/icons/PNG/Icon-upload.png'
 import MainPlayer from './components/main/main-video/main-player/MainPlayer.jsx';
 import Description from './components/main/main-video/description/Description';
 import Comments from './components/main/main-video/comments/Comments';
@@ -59,7 +61,7 @@ class App extends React.Component {
       return (
     <div> 
     {/* <Data/> */}
-    <Header logo={logo} mohan={mohan}/>
+    <Header logo={logo} mohan={mohan} magGlass={magGlass} upPlus={upPlus}/>
     <MainPlayer mainplay={this.state.Data}/>
     <Description explain={this.state.Data}/>
     

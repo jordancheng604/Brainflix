@@ -19,15 +19,16 @@
 
     &__views{
         border: 3px solid lightgreen;
+        width:5rem;
     }
 
     &__likes{
         border: 3px solid lightpink;
-
+        width:5rem;
     }
 
     &__long{
         border: 3px solid lightskyblue;
-
+        width: 15rem;
     }
 }
