@@ -1,8 +1,6 @@
 @import '../../../../styles/appStylz.scss';
 
-.describe{
-            // border: 3px solid lightskyblue;
-
+.describe{            
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -10,33 +8,25 @@
     width: 95%;
     margin: 0rem 1rem 0rem 1rem;
     padding: 0rem;
-    // border: 1px dashed lightskyblue;
     @include desktop{
-        width: 50%;
-        margin: 0rem 0rem 0rem 9.5rem;
+        width: 59%;
+        margin: 0rem 0rem 0rem 11.5rem;
     }
-
     &__title{
         font-weight: bolder;
         font-size: 1.7rem;
         margin: 1.65rem 0rem 0rem 0rem;
-
         @include tablet{
             font-weight: bolder;
             font-size: 2.2rem;
             margin: 2.3rem 1rem 0rem 0rem;
             padding: 0rem;
         }
-
         @include desktop {
             font-size: 2rem;
-        }
-    }
-
+        }}
     &__authToLksContain{
-        // border: 1px solid yellow;
         margin: 1rem 0rem 0rem 0rem;
-
         @include tablet{
             width: 100%;
             height: 3rem;
@@ -47,51 +37,37 @@
             margin: 0rem 0rem 0rem 0rem;
             padding: 0rem 0rem 0.4rem 0rem;
         }
-
         @include desktop{
             height: 2.5rem;
-        }
-    }
-
+        }}
     &__authDate{
         width: 100%;
-        // border: 1px dotted lightslategray;
         margin: 0rem 6.9rem 1rem 0rem;
-
         @include tablet{
             margin: 1rem 1rem 1rem 0rem;
             width: 45%;
-            // border: 1px solid lightskyblue
-        }
-    }
+        }}
     &__author{
         font-weight: bolder;
         margin: 0rem 0.5rem 0rem 0rem;
         @include desktop{
             font-size: 0.8rem;
-        }
-    }
-
+        }}
     &__date{
         color: gray;
         @include desktop{
             font-size: 0.8rem;
-        }
-    }
-
+        }}
     &__viewLike{
         width: 100%;
         border-bottom: 1px solid #e1e1e1;
         margin: 1.99rem 6.9rem 1rem 0rem;
         padding: 0rem  0rem 1.3rem 0rem;
         display: flex;
-        // align-self: flex-start;
         flex-direction: row;
         align-content: flex-end;
-
         @include tablet{
             width: 45%;
-            // border: 1px solid lightgreen;
             border-bottom: none;
             margin: 1rem 0rem 1rem 1rem;
             display: flex;
@@ -101,74 +77,49 @@
         @include desktop{
             font-size: 0.8rem;
             margin: 1rem 2.5rem 1rem 1rem;
-        }
-    }
-
+        }}
     &__eyeBall{
         margin: 0rem 0.5rem 0rem 0rem;
         @include desktop{
            height: 0.8rem;
-        }
-    }
-
+        }}
     &__views{
-        // border: 3px solid lightgreen;
         width:5rem;
         margin: 0rem 0.9rem 0rem 0rem;
         @include desktop{
             font-size: 0.7rem;
-        }
-    }
-
+        }}
     &__heartHeart{
         margin: 0rem 0.5rem 0rem 1rem;
         @include desktop{
             height: 0.8rem;
             margin-left: 0.4rem;
-        }
-    }
+        }}
     &__likes{
-        // border: 3px solid lightpink;
         width:5rem;
-        // margin: 0rem 0rem 0rem 0rem;
-        // padding: 0rem 0rem 1rem 0rem;
         @include desktop{
             font-size: 0.7rem;
-            
-        }
-    }
-
+        }}
     &__long{
-        // border: 3px solid lightskyblue;
         width: 100%;
-
         font-weight: normal;
         font-size: 0.8rem;
         line-height: 1rem;
-
         @include tablet{
-            // border: 1px dashed salmon;
             width: 9rem;
             line-height: 1.4rem;
         }
         @include desktop{
             font-size: 0.7rem;
-        }
-    }
-
+        }}
     &__longContainr{
-        // border: 1px solid purple;
-
         @include tablet{
             height: 9rem;
             width: 67.5%;
-            // margin: 0;
             margin: 2rem 0rem 0rem 0rem;
         }
         @include desktop {
             width: 73.5%;
             
-        }
-    }
-    
+        }}
 }

@@ -2,60 +2,19 @@
 @import './Partials//typography';
 @import './Partials//variables';
 
-// @font-face {
-//     font-family: "Avenir";
-//     src: url("../assets/_GlobalFont/AvenirNextProLT/avenirRegular.otf");
-
-//     font-family: sans-serif;
-
-// }
-
-$mobile-breakpoint: 320px;
-$tablet-breakpoint: 768px;
-$desktop-breakpoint: 1200px;
-
-@mixin mobile {
-    @media (min-width: $mobile-breakpoint) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (min-width: $tablet-breakpoint) {
-        @content;
-        
-    }
-}
-
-@mixin desktop {
-    @media (min-width: $desktop-breakpoint) {
-        @content;
-    }
-}
-
-// @mixin photos {
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: 100%;
-// }
-
-
 html{
     font-weight: normal;
     font-family: "Avenir", "Roboto", sans-serif;
-    
 }
 
 .header{
     width: 100%;
 }
 
-
-
 .SideVideo{
     @include desktop{
         float: right;
-        margin: -47.3rem 0rem 0rem 0rem;
+        margin: -47.3rem -3rem 0rem 0rem;
         padding: 2rem 0rem 0rem 0rem;
         border-left: 1.2px solid #e1e1e1;
     }

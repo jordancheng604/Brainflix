@@ -9,7 +9,6 @@ export default function Comments({commentsSection}){
                 {commentsSection.slice(12).map(commAdd => <img className="comments__image" src={commAdd.image} alt=""></img>
                 ).slice(0)}
              <textarea type="text" rows='4' placeholder="Write comment here" className="comments__input">
-                
                 </textarea>
                 <button className="comments__button">COMMENT</button>
             </div>
@@ -24,9 +23,7 @@ export default function Comments({commentsSection}){
             <div className="comments__commMent">{commsec.comment}</div>
             </li>
             ).slice(0,3)}
-            
             </ul>
-            
         </section>
     )
 }
