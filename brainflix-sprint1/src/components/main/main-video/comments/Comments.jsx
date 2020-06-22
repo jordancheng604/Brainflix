@@ -2,27 +2,7 @@ import React from 'react'
 
 export default function Comments({commentsSection}){
     return(
-        <section className="comments">
-            {/* <div className="comments__status">
-
-            <div className="comments__writeOne">
-            {commentsSection.slice(12).map(addComm =>
-            <img className="comments__image" alt='' src={addComm.image}></img>
-            
-            <textarea type="text" rows='5' placeholder="Write comment here" className="comments__input">
-                
-            </textarea>
-
-            <button className="comments__button">COMMENT</button>
-
-            )
-            }
-            </div>
-            </div> */}
-                {/* // {commentsSection.slice(12,1).image} */}
-                
-
-               
+        <section className="comments">    
             <h5 className="comments__commStat">3 Comments</h5>
             <h5 className="comments__joinConvo" >JOIN THE CONVERSATION</h5>
             <div className="comments__addComm">
