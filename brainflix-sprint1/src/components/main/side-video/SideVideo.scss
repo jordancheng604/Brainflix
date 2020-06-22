@@ -8,6 +8,13 @@ width: 100%;
 list-style: none;
 padding: 0rem;
 
+@include desktop{
+    width: 37%;
+    border: 1px dashed greenyellow;
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
 &__sectionTitle{
     margin: 0rem 1rem 3rem 1rem;
     padding: 0rem;

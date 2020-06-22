@@ -51,8 +51,12 @@ html{
 }
 
 
-// .Description{
-//     @include desktop{
-//         width: 25%;
-//     }
-// }
+
+.SideVideo{
+    @include desktop{
+        float: right;
+        margin: -47.3rem 0rem 0rem 0rem;
+        padding: 2rem 0rem 0rem 0rem;
+        border-left: 1.2px solid #e1e1e1;
+    }
+}
