@@ -11,12 +11,14 @@
     }
 
     &__video{
-        width: 100%;
+        width: 109%;
         height: 12.5rem;
         margin: 0rem;
         padding: 0rem;
         margin: 0rem 0rem 0rem 0rem;
         background-color: black;
+        background-size: 100%;
+        object-fit: 100%;
 
         @include tablet{
             height: 24.5rem;
