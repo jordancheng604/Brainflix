@@ -200,9 +200,10 @@
 
         @include tablet{
             width: 88%;
-            margin: 0rem 0rem 0rem 0rem;
-            padding: 0rem;
+            margin: -1rem 0rem 0rem 0rem;
+            padding: 0rem 0rem 0rem 2.8rem;
             border-bottom: none;
+            float: right;
         }
 
     }
