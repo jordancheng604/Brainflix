@@ -13,5 +13,4 @@ export default function SideVideo({sideVids}) {
             </li>
             ).slice(0,8)}
         </ul>
-    )  
-}
+    )}
