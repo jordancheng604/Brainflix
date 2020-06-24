@@ -1,0 +1,204 @@
+@import '../../../../styles/appStylz.scss';
+.comments{
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+        width: 59.5%;
+        margin: 0rem 0rem 0rem 10rem;
+    }
+    &__commStat{
+        font-size: 1rem;
+        width: 95%;
+        margin: 2rem 0rem 0rem 1rem;
+        @include tablet{
+            margin: 2.5rem 0rem 0rem 1rem;
+        }
+        @include desktop{
+            font-size: 0.78rem;
+        }}
+    &__joinConvo{
+        font-size: 0.8rem;
+        width: 95%;
+        margin: 2rem 0rem 0.5rem 5rem;
+        color: #AFAFAF;
+        display: flex;
+        @include tablet{
+            margin: 2rem 0rem 0.5rem 5.5rem;
+        }
+        @include desktop{
+            font-size: 0.59rem;
+        }}
+    &__addComm{
+        width: 95%;
+        margin: 0rem 0rem 1rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-self: center;
+        border-bottom: 1.2px solid #e1e1e1;
+        padding: 0rem 0rem 1.5rem 0rem;
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            padding: 0rem 0rem 1.3rem 0rem;
+        }
+        @include desktop{
+            width: 100.5%;
+            padding-left: 0rem;
+            margin-left: 2rem;
+        }}
+    &__image{
+        min-width: 3rem;
+        min-height: 3rem;
+        max-width: 3.001rem;
+        max-height: 3.001rem;
+        border-radius: 55%;
+        background-color: #e1e1e1;
+        margin: 0rem 1rem 1rem 0.5rem;
+        @include tablet{
+            margin: 0rem 1rem 0rem 0rem;
+            padding: 0rem;
+        }
+        @include desktop{
+            min-width: 1rem;
+            min-height: 1rem;
+            max-width: 2.5rem;
+            max-height: 2.5rem;
+        }}
+    &__input{
+        background-color: #FAFAFA;
+        border: 2px solid #e1e1e1;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        font-family: "Avenir", "Roboto", sans-serif;
+        width: 12.5rem;
+        padding: 0.8rem;
+        @include tablet{
+            width: 59%;
+            height: 1rem;
+            margin: 0rem;
+            padding: 0.8rem;
+        }}
+    &__button{
+        background-color: #0095ff;
+        color: white;
+        font-weight: bolder;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        width: 15rem;
+        height: 3.3rem;
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin: 1rem 0rem 0rem 4.5rem;
+        @include tablet{
+            width: 9.8rem;
+            height: 2.9rem;
+            margin: 0rem 0rem 0rem 1rem;
+            padding: 0rem;
+        }
+        @include desktop{
+            width: 8.25rem;
+            height: 2.8rem;
+            font-size: 0.8rem;
+        }}
+    &__secCards{
+        list-style: none;
+        width: 97%;
+        margin: 0.5rem 0rem 0rem 0rem;
+        padding: 0rem 1rem 0rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    &__card{
+        margin: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0rem 0rem 1rem 0rem;
+        @include tablet{
+            border-bottom: 1.2px solid #e1e1e1;
+            padding: 0rem 0rem 1rem 0rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        @include desktop{
+            font-size: 0.8rem;
+            width:103.5%;
+            border-bottom: 1.2px solid #e1e1e1;
+        }}
+    &__image2{
+        background-color: #e1e1e1;
+        min-width: 2.4rem;
+        min-height: 2.4rem;
+        max-width: 1rem; 
+        max-height: 1rem;
+        border-radius: 55%;
+        margin: 0rem 0.5rem 0rem 0rem;
+        @include tablet{
+            margin: 0rem 0.5rem 0rem 0rem;
+            height: 100%;
+        }
+        @include desktop{
+            min-width: 1.9rem;
+            min-height:1.9rem;
+            max-width: 3rem; 
+            max-height: 3rem;
+        }}
+    &__namDatContain{
+        width: 83%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            height: 1rem;
+            margin: 0rem;
+            padding: 0rem;;
+        }
+        @include desktop{
+            font-size: 0.7rem;
+        }}
+    &__usrName{
+        font-weight: bolder;
+        margin: 0rem 1rem 0rem 0rem;
+        font-size: 0.9rem;
+        @include desktop{
+            font-size: 0.75rem;
+        }}
+    &__date{
+        color: #AFAFAF;
+        display: flex;
+        justify-self: flex-end;
+        height: 1rem;
+        width: 30%;
+    }
+    &__commMent{
+        width: 15rem;
+        display: flex;
+        justify-self: flex-end;
+        align-self: flex-end;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        border-bottom: 1.2px solid #e1e1e1;
+        padding: 0rem 0rem 1.9rem 3rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        @include tablet{
+            width: 88%;
+            margin: -1rem 0rem 0rem 0rem;
+            padding: 0rem 0rem 0rem 2.8rem;
+            border-bottom: none;
+            float: right;
+        }
+        @include desktop{
+            font-size: 0.75rem;
+            width: 100%;
+        }}
+}
