@@ -1,4 +1,4 @@
-@import '../../../../styles/appStylz.scss';
+@import '../../styles/appStylz.scss';
 
 .mainPlayer{
     width: 100%;
@@ -7,7 +7,7 @@
     @include tablet{
     }
     &__video{
-        width: 119.9%;
+        width: 100%;
         height: 12.5rem;
         margin: 0rem;
         padding: 0rem;

@@ -1,9 +1,10 @@
 import React from 'react';
-import eyeView from '../../../../assets/icons/PNG/Icon-views.png';
-import heartLike from '../../../../assets/icons/PNG/Icon-likes.png';
+import eyeView from '../../assets/icons/PNG/Icon-views.png';
+import heartLike from '../../assets/icons/PNG/Icon-likes.png';
 
 export default function Description({explain}) {
     return(
+        // <div></div>
         <section className="describe">
             {explain.slice(7).map(expDesc => <div><h1 className='describe__title' key={expDesc.id}>
             {expDesc.title}</h1>
