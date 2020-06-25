@@ -31,9 +31,7 @@ class App extends React.Component {
       return (
     <div> 
       <BrowserRouter>
-      <Link to='/'>Home</Link>
-      <Link to='Upload'>Upload</Link>
-      <Link to=''>Something?</Link>
+     
 
 
       <Switch>
