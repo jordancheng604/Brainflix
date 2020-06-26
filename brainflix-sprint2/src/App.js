@@ -12,10 +12,10 @@ import React from 'react';
 // import Comments from './components/main/main-video/comments/Comments';
 // import SideVideo from './components/main/side-video/SideVideo';
 // import appStylz from './styles/appStylz.scss'
-// import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+
 import Home from './components/Main';
 import Upload from './pages/Upload';
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch, withRouter, Link } from "react-router-dom";
 import MainPlayer from './components/main-player/MainPlayer';
 
 class App extends React.Component {
@@ -38,7 +38,7 @@ class App extends React.Component {
       <Switch>
       <Route path='/' exact component={Home}/>
       <Route path='/Upload' component={Upload}/>
-      <Route exact path='/:id' component={MainPlayer}></Route>
+      <Route path='/video/:id' component={MainPlayer}></Route>
       
       </Switch>
       </BrowserRouter>

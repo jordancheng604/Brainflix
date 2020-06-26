@@ -1,14 +1,19 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+//import { withRouter } from 'react-router-dom';
+import { Component } from 'react';
+import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
+import SideVideo from '../side-video/SideVideo';
 
 function MainPlayer ({mainplay}) {
 //this.props.match.params.id
 
 //componentDidUpdate goes here?
 
+//poster={mainplay.image}
+
     return(
         <section className='mainPlayer'>
-            <video controls src="" poster={mainplay.image}className='mainPlayer__video' alt='Main Video' key={mainplay.id}>
+            <video controls src="" className='mainPlayer__video' alt='Main Video' key={mainplay.id} poster={mainplay.image}>
             <source src="" type=""></source>
             </video>
             <div className='mainPlayer__controls'>

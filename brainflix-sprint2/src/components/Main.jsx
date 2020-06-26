@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './header/Header'
 import logo from '../logo.svg'
@@ -9,15 +9,16 @@ import MainPlayer from './main-player/MainPlayer.jsx';
 import Description from './description/Description.jsx';
 import Comments from './comments/Comments.jsx';
 import SideVideo from './side-video/SideVideo.jsx';
+import sideVids from './side-video/SideVideo';
 // import appStylz from '../styles/appStylz.scss'
-// import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
 
 class Main extends React.Component{
     state = {
         data: [],
         mainVideo: {}
     }        
-    componentDidMount(){
+    async componentDidMount(){
         axios.get('https://project-2-api.herokuapp.com/videos?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
         // .get('https://project-1-api.herokuapp.com/comments?api_key=labKey')
         .then(res=>{console.log("This is the video array", res.data)
@@ -33,14 +34,63 @@ class Main extends React.Component{
     //     axios.get('https://project-1-api.herokuapp.com/comments?api_key=labKey')
     //     .then(res=>this.setState({commentsData: res.data}))     
     // }
-    componentDidUpdate(SideVideo){
+    componentDidUpdate({props}, prevProps){
         //time for DOM change, if side video has an update(event) then mainPlayer will take update and its :id and render it.
-
+        //change prop, 
+        //match.params
+        //slash video slash id
+        //
         // if (this.props.SideVideo)
+        //this takes in previous state and previous props
+        //old state not equal to current state(param)
+        //use axios to get new param(id) object and setstate of the mainvideo
+        //axios call to grab info from main.
+        //
+        //new video is about a 1 liner.
+        //axios get the new data.
+        //this.props.match.params.id - will get updated. 
+        //match.params relates to users' location.
+        //axios.get(url {`/videos/${vidList.id}`)
+        //user clicks video on mainPlayer; it won't axios call.
+        //this.props.match.params.id = prevprops.match.params.id
+        //(e)preventDefault.
+        //because only accessing the id.
+        // URL = ({`/videos/${vidList.id}`})
+        //        axios.get(/videos/`${vidList.id}`)
+        //axios.get('props.match.params.id'
+
+        // <Route exact path="/videos/:id" component={SideVideo}/>
+        // if(this.props.params.id !== props.params.id){
+        // axios.get(`/videos/${vidList.id}`)
+        // .then(res=>{console.log("This is the *UPDATED* Main video", res.data)
+        // this.setState({newMainVideo: res.data})})
+        // }
+
+        //<Route exact path="/videos/:id" component={SideVideo}/>
+        //this.props.match.params.id
+
+        //dynamic route
+        //route to component. which is the video id.
+
+        //console.log(this.props.match.params.id)
+            //console.log(prevProps.match.params.id)
+
+            console.log("This is componentDidUpdate"+{props});
+            console.log("this is prevProps"+{prevProps})
+
+        // if(props.params.id !== prevProps.params.id){
+        //      axios.get(<Route path="/videos/:id" component={SideVideo}/>)
+        //     .then.setState(props.match.params.id)}
+
+        if(this.props.match.params){console.log("params")}
     }
 
     render(){
-        console.log(this.state.mainVideo.comments)
+        //console.log("this is the state main video:" + this.state.mainVideo)
+         //console.log("this is the props main video:" 
+        // + this.props.mainVideo)
+        // console.log("this is another console log" + this.props.match.params)
+            //console.log(this.state.id)
         let videoComment = "";
         if (this.state.mainVideo.comments!==undefined){
         videoComment =  <Comments commentsSection={this.state.mainVideo.comments}/>
@@ -52,10 +102,10 @@ class Main extends React.Component{
             <Description explain={this.state.mainVideo}/>
             {videoComment}
            
-            <SideVideo sideVids={this.state.data}/>
+            <SideVideo sideVids={this.state.data} mainplay={this.state.mainVideo}/>
         </div>
     )
     }
 }
 
-export default Main;
+export default withRouter(Main);

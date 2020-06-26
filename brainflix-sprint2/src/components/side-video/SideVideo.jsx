@@ -1,73 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link, withRouter } from "react-router-dom";
 import { render } from '@testing-library/react';
 import MainPlayer from '../main-player/MainPlayer';
 
+//add link to each card. and then do componentdidupdate , checking params.
 
-function SideVideo({sideVids}, {mainplay}) {
-console.log('hello from SideVideo component');
-console.log(mainplay);
+class SideVideo extends React.Component {
+//console.log('hello from SideVideo component');
+//console.log(MainPlayer);
 // let noDoubles = "";
 //You have to somehow link and route each card and use their exact :id so it knows what video to pull and render to the main video player.
-
-if (true===true)
-{
-    return(
-        <ul className="SideVideo">
-            <h5 className="SideVideo__sectionTitle" >NEXT VIDEO</h5>
-            {sideVids.map(
-                
-                vidList => 
-            
-                // <li className="SideVideo__card" key={vidList.id}>
-                //Why no get id....?....
-                //Why are they key.id errors...
-            <Link to='/{vidList.id}'>
-            <li className="SideVideo__card" key={vidList.id}>
-                <img className="SideVideo__image" src={vidList.image} alt='thumbnail to indicate video'/>
-                <div>
-                <div className="SideVideo__title" >{vidList.title}</div>
-            <div className="SideVideo__author" >{vidList.channel}</div>
-            </div>
-            </li>
-            </Link>
-            ).slice({mainplay})
-            //Maybe you want a different method.
-            //Whatever is selected. and whatever video is to be shown on the mainPlayer; will be hidden.
-            //a new array will be created that doesn't have the selected video that's showing in MainPlayer?
-            }
-        </ul>
-    )
-}
-}
-export default withRouter(SideVideo);
-
-
-// export default function SideVideo({sideVids}) {
-//     console.log('hello');
-//     // let noDoubles = "";
-//     // if (this.state === MainPlayer.mainplay.id)
-//         return(
-//             <ul className="SideVideo">
-//                 <h5 className="SideVideo__sectionTitle" >NEXT VIDEO</h5>
-//                 {sideVids.map(vidList => 
-//                 <Link to='/'>
-//                 <li className="SideVideo__card" key={vidList.id}>
-//                     <img className="SideVideo__image" src={vidList.image} alt='thumbnail to indicate video'/>
-//                     <div>
-//                     <div className="SideVideo__title" >{vidList.title}</div>
-//                 <div className="SideVideo__author" >{vidList.channel}</div>
-//                 </div>
-//                 </li>
-//                 </Link>
-//                 ).slice( MainPlayer => MainPlayer.mainplay.id)
-//                 }
-//             </ul>
-//         )
+//i need a  if statement in my filter
+//console.log("sidevideo props is:"+props.mainplay)
+//console.log("this is the mainplayer video:"+mainplay)
+//if(mainplay.id == sideVids.id).filter(mainplay.id){}
     
-//     }
+    
+                render() {
+                    let vidList = this.props.sideVids
+                    //console.log("side video ---"+vidList)
+                
+                    return(
+                        <>
+                   
+                        {vidList.filter(
+                            video=>video.id !== this.props.mainplay.id).map(video=>{return(
+                                <Link to={`/videos/${video.id}`}>
+                    <li className="SideVideo__card" key={video.id}>
+                    
+                        <img className="SideVideo__image" src={video.image} alt='thumbnail to indicate video'/>
+                        <div>
+                        <div className="SideVideo__title" >{video.title}</div>
+                    <div className="SideVideo__author" >{video.channel}</div>
+                    </div>
+                    </li>
+                    </Link>
+                   
+                           )  } )}</>)
+            }}
+        
+        export default SideVideo;
 
-
-
-
-
+//<li className="SideVideo__card" key={video.id}>
+// </li>

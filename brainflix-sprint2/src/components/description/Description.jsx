@@ -1,8 +1,9 @@
 import React from 'react';
 import eyeView from '../../assets/icons/PNG/Icon-views.png';
 import heartLike from '../../assets/icons/PNG/Icon-likes.png';
+import { BrowserRouter, Route, Switch, Link, withRouter } from "react-router-dom";
 
-export default function Description({explain}) {
+function Description({explain}) {
 
     return(
         // <div></div>
@@ -32,4 +33,4 @@ export default function Description({explain}) {
         </section>
     )
 }
-
+export default withRouter(Description);
