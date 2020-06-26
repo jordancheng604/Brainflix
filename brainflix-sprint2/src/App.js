@@ -1,7 +1,7 @@
 import React from 'react';
 // import axios from 'axios'
 // import Header from './components/header/Header.jsx';
-import logo from '../src/logo.svg';
+// import logo from '../src/logo.svg';
 // import mohan from '../src/assets/images/mohan.jpg';
 // import magGlass from '../src/assets/icons/PNG/Icon-search.png'
 // import upPlus from '../src/assets/icons/PNG/Icon-upload.png'
@@ -16,6 +16,7 @@ import logo from '../src/logo.svg';
 import Home from './components/Main';
 import Upload from './pages/Upload';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import MainPlayer from './components/main-player/MainPlayer';
 
 class App extends React.Component {
   // state = {
@@ -37,7 +38,7 @@ class App extends React.Component {
       <Switch>
       <Route path='/' exact component={Home}/>
       <Route path='/Upload' component={Upload}/>
-      <Route path=''>Something??</Route>
+      <Route exact path='/:id' component={MainPlayer}></Route>
       
       </Switch>
       </BrowserRouter>

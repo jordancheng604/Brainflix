@@ -19,7 +19,7 @@ export default function Comments({commentsSection}){
 
         {commentsSection.map(
             commentsSection =>
-            <li className="comments__card" > 
+            <li className="comments__card" key={commentsSection.id}> 
             <img className="comments__image2" alt="" src=""/>
            <span className="comments__namDatContain">
           <span className="comments__usrName">{commentsSection.name}</span>

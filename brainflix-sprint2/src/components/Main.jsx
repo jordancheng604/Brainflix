@@ -33,11 +33,16 @@ class Main extends React.Component{
     //     axios.get('https://project-1-api.herokuapp.com/comments?api_key=labKey')
     //     .then(res=>this.setState({commentsData: res.data}))     
     // }
+    componentDidUpdate(SideVideo){
+        //time for DOM change, if side video has an update(event) then mainPlayer will take update and its :id and render it.
+
+        // if (this.props.SideVideo)
+    }
 
     render(){
         console.log(this.state.mainVideo.comments)
         let videoComment = "";
-        if (this.state.mainVideo.comments!=undefined){
+        if (this.state.mainVideo.comments!==undefined){
         videoComment =  <Comments commentsSection={this.state.mainVideo.comments}/>
         }
     return(
