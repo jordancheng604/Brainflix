@@ -9,42 +9,67 @@ margin: 0 auto;
 padding: 0 auto;
 
 &__sectionTitle{
-    border: 1px dashed greenyellow;
     border-top: 1px solid #e1e1e1;
-    padding: 1rem 0rem 0rem 0rem;
+    padding: 1.8rem 0rem 1rem 1.5rem;
+    margin: 1rem 0rem 1rem 0em;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 &__videoAreaTitle{
     display: flex;
     align-self: center;
     color: #afafaf;
+    font-size: 0.8rem;
+    margin: 1rem 0rem 0rem 1.5rem;
 }
 
 &__yourVideoImage{
-    width: 90%;
-
-
+    width: 18rem;
+    border-radius: 5px;
+    margin: 0.3rem 0rem 1rem 1.5rem;
+     
 }
 
 &__yourVideoTitle{
     color: #afafaf;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 1rem 0rem 0.3rem 1.5rem;
 }
 
 &__yourTitleInput{
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 0.8rem;
+    border:1px solid #e1e1e1;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin: 0rem 0rem 1rem 1.5rem;
+    width: 16rem;
 }
 
 &__yourVideoDescriptionTitle{
     color: #afafaf;
+    margin: 0rem 0rem 0rem 1.5rem;
+    font-size: 0.8rem;
 }
 
 &__yourVideoDetailsInput{
-    padding: 0.8rem 0rem 3rem 0.8rem;
+    padding: 0.8rem 0rem 6.2rem 0.8rem;
+    margin: 0rem 0rem 2rem 1.5rem;
+    border:1px solid #e1e1e1;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin: 0.5rem 0rem 1rem 1.5rem;
+    width: 17rem;
+    font-family: 'Avenir', 'Roboto', sans-serif;
+    color: blue;
+    font-weight: 500;
 }
 
 &__publishButton{
-    width: 95%;
-    height: 2.5rem;
+    width: 18rem;
+    margin: 0.5rem 0rem 0rem 1.5rem;
+    height: 2.8rem;
     color: white;
     background-color: #0095FF;
     border: none;
@@ -53,12 +78,13 @@ padding: 0 auto;
 }
 
 &__cancelButton{
-    width: 95%;
+    width: 18rem;
     height: 2.5rem;
     color: #0095FF;
     background-color: white;
     border: none;
     border-radius: 5px;
     font-weight: bolder;
+    margin: 1rem 0rem 0rem 1.5rem;
 }
 }

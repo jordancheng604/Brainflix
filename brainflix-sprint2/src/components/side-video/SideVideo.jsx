@@ -5,28 +5,16 @@ import MainPlayer from '../main-player/MainPlayer';
 
 //add link to each card. and then do componentdidupdate , checking params.
 
-class SideVideo extends React.Component {
-//console.log('hello from SideVideo component');
-//console.log(MainPlayer);
-// let noDoubles = "";
-//You have to somehow link and route each card and use their exact :id so it knows what video to pull and render to the main video player.
-//i need a  if statement in my filter
-//console.log("sidevideo props is:"+props.mainplay)
-//console.log("this is the mainplayer video:"+mainplay)
-//if(mainplay.id == sideVids.id).filter(mainplay.id){}
-    
-    
+class SideVideo extends React.Component {  
                 render() {
                     let vidList = this.props.sideVids
-                    //console.log("side video ---"+vidList)
-                
                     return(
                         <>
-                   
+                        <h5 className="SideVideo__sectionTitle">NEXT VIDEO</h5>
                         {vidList.filter(
-                            video=>video.id !== this.props.mainplay.id).map(video=>{return(
-                                <Link to={`/videos/${video.id}`}>
-                    <li className="SideVideo__card" key={video.id}>
+                        video=>video.id !== this.props.mainplay.id).map(video=>{return(
+                        <Link to={`/videos/${video.id}`}>
+                         <li className="SideVideo__card" key={video.id}>
                     
                         <img className="SideVideo__image" src={video.image} alt='thumbnail to indicate video'/>
                         <div>
@@ -40,6 +28,3 @@ class SideVideo extends React.Component {
             }}
         
         export default withRouter(SideVideo);
-
-//<li className="SideVideo__card" key={video.id}>
-// </li>
