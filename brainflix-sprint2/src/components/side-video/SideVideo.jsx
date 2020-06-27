@@ -39,7 +39,7 @@ class SideVideo extends React.Component {
                            )  } )}</>)
             }}
         
-        export default SideVideo;
+        export default withRouter(SideVideo);
 
 //<li className="SideVideo__card" key={video.id}>
 // </li>
