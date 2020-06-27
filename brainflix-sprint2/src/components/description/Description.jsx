@@ -2,24 +2,18 @@ import React from 'react';
 import eyeView from '../../assets/icons/PNG/Icon-views.png';
 import heartLike from '../../assets/icons/PNG/Icon-likes.png';
 import { BrowserRouter, Route, Switch, Link, withRouter } from "react-router-dom";
-// import Prismic from 'prismic-reactjs';
 import moment from 'moment';
 
-function Description({explain},props) {
-    // timestamp = Date.now()
-    //const moment = require 
+function Description({explain}) {
+    
     return(
-        // <div></div>
         <section className="describe">
             <div><h1 className='describe__title' key={explain.id}>
             {explain.title}</h1>
             <div className="describe__authToLksContain">
             <span className="describe__authDate">
             <span className="describe__author">{explain.channel}</span>
-            {/* {moment(new Date(explain.timestamp)).format("YYY-MM-DD")} */}
-
-
-            <span className="describe__date"> {moment(new Date(explain.timestamp)).format("MM/DD/YYYY")} </span>
+            <span className="describe__date"> {moment(new Date(explain.timestamp)).fromNow()} </span>
             </span>
             <span className="describe__viewLike">
             <span>

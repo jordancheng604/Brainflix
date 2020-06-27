@@ -1,5 +1,6 @@
-import React from 'react'
-import mohan from '../../assets/images/mohan.jpg'
+import React from 'react';
+import mohan from '../../assets/images/mohan.jpg';
+import moment from 'moment';
 
 export default function Comments({commentsSection}){
     console.log(commentsSection)
@@ -23,7 +24,7 @@ export default function Comments({commentsSection}){
             <img className="comments__image2" alt="" src=""/>
            <span className="comments__namDatContain">
           <span className="comments__usrName">{commentsSection.name}</span>
-            <span className="comments__date">{commentsSection.timestamp}</span>
+            <span className="comments__date">{moment(new Date(commentsSection.timestamp)).fromNow()}</span>
             </span>
             <div className="comments__commMent">{commentsSection.comment}</div>
              </li> 
