@@ -40,20 +40,28 @@
         }
     }
 
-    &__searchBoxMagGlass{
-        
-        // background-image: url(../../assets//icons/SVG/Icon-search.svg);
-        background-repeat: no-repeat;
-        
+    &__searchBoxContainer{
+        // border: 2px solid blue;
+        margin: 0;
     }
+
+    &__searchBoxMagGlass{
+        background-image: url(../../assets//icons/SVG/Icon-search.svg);
+        background-repeat: no-repeat;
+        min-height: 3rem;
+        min-width: 3.2rem;
+        margin: -10rem 0rem 0rem 1.99rem;
+        padding: -10rem 0rem 0rem 1rem;
+        }
 
     &__textSearchBox{
     width: 15rem;
     height: 1rem;
     margin: 0rem 0.8rem 0rem 1.5rem;
-    padding: 1.09rem;
+    padding: 1rem 1rem 1rem 1.9rem;
     display: flex;
     align-self: center;
+    flex-direction: row;
     border-color: #e1e1e1;
     background-color: #fafafa;
     border: 1.3px solid #e1e1e1;
@@ -74,7 +82,8 @@
         align-self: center;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0rem 0rem 1rem 0.2rem;
+        width: 100%;
+        margin: -1rem 0rem 1rem 3.2rem;
         @include tablet{
             width: 35rem;
             height: 3rem;

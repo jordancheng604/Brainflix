@@ -139,7 +139,7 @@
         max-width: 1rem; 
         max-height: 1rem;
         border-radius: 55%;
-        margin: 0rem 0.5rem 0rem 0rem;
+        margin: 0rem 0.5rem 0rem 0.5rem;
         @include tablet{
             margin: 0rem 0.5rem 0rem 0rem;
             height: 100%;
@@ -178,10 +178,12 @@
         display: flex;
         justify-self: flex-end;
         height: 1rem;
-        width: 30%;
+        width: 35%;
+        //text-align: right;
+        //border: 1px dashed fuchsia;
     }
     &__commMent{
-        width: 15rem;
+        width: 75%;
         display: flex;
         justify-self: flex-end;
         align-self: flex-end;
@@ -189,7 +191,7 @@
         line-height: 1.2rem;
         border-bottom: 1.2px solid #e1e1e1;
         padding: 0rem 0rem 1.9rem 3rem;
-        margin: -0.5rem 0rem 0rem 0rem;
+        margin: -0.5rem 0rem 0rem 0.39rem;
         @include tablet{
             width: 88%;
             margin: -1rem 0rem 0rem 0rem;

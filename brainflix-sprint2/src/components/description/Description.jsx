@@ -12,7 +12,7 @@ function Description({explain}) {
             {explain.title}</h1>
             <div className="describe__authToLksContain">
             <span className="describe__authDate">
-            <span className="describe__author">{explain.channel}</span>
+            <span className="describe__author">By {explain.channel}</span>
             <span className="describe__date"> {moment(new Date(explain.timestamp)).fromNow()} </span>
             </span>
             <span className="describe__viewLike">

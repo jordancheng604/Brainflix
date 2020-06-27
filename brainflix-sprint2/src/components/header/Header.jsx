@@ -14,9 +14,9 @@ function Header(props){
 
         </div>
 
-        <div className="header__searchBoxMagGlass">
-        {/* <img src={magGlass} alt='Magnigying Glass Icon'/> */}
+        <div className="header__searchBoxContainer">
         <input type='text' className="header__textSearchBox" placeholder='Search'/>
+        <img className="header__searchBoxMagGlass"src="" alt=''/>
         </div>
 
         <div className="header__rightSide">
