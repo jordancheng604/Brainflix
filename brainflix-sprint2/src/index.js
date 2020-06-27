@@ -10,6 +10,7 @@ import './components/main-player/mainPlayer.scss';
 import './components/comments/comments.scss';
 import './components/side-video/SideVideo.scss';
 import './components/description/Description.scss';
+import './components/Upload/UploadComponent.scss';
 
 ReactDOM.render(
   <React.StrictMode>

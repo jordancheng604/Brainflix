@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from './header/Header'
-import logo from '../logo.svg'
+import Header from './header/Header';
+import logo from '../logo.svg';
 import mohan from '../assets/images/mohan.jpg';
-import magGlass from '../assets/icons/SVG/Icon-search.svg'
-import upPlus from '../assets/icons/SVG/Icon-upload.svg'
+import magGlass from '../assets/icons/SVG/Icon-search.svg';
+import upPlus from '../assets/icons/SVG/Icon-upload.svg';
 import MainPlayer from './main-player/MainPlayer.jsx';
 import Description from './description/Description.jsx';
 import Comments from './comments/Comments.jsx';
