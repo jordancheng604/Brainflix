@@ -4,6 +4,7 @@ import heartLike from '../../assets/icons/PNG/Icon-likes.png';
 import { BrowserRouter, Route, Switch, Link, withRouter } from "react-router-dom";
 
 function Description({explain}) {
+    // timestamp = Date.now()
 
     return(
         // <div></div>

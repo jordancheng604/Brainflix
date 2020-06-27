@@ -1,9 +1,64 @@
 @import '../../styles/appStylz.scss';
 
 .UploadComponent{
-//max-width: 80%;
+width: 99%;
+display: flex;
+flex-direction: column;
+align-content: center;
+margin: 0 auto;
+padding: 0 auto;
 
 &__sectionTitle{
     border: 1px dashed greenyellow;
+    border-top: 1px solid #e1e1e1;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+&__videoAreaTitle{
+    display: flex;
+    align-self: center;
+    color: #afafaf;
+}
+
+&__yourVideoImage{
+    width: 90%;
+
+
+}
+
+&__yourVideoTitle{
+    color: #afafaf;
+}
+
+&__yourTitleInput{
+    padding: 1rem;
+}
+
+&__yourVideoDescriptionTitle{
+    color: #afafaf;
+}
+
+&__yourVideoDetailsInput{
+    padding: 0.8rem 0rem 3rem 0.8rem;
+}
+
+&__publishButton{
+    width: 95%;
+    height: 2.5rem;
+    color: white;
+    background-color: #0095FF;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+&__cancelButton{
+    width: 95%;
+    height: 2.5rem;
+    color: #0095FF;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
 }
 }
