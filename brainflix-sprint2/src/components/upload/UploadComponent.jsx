@@ -1,5 +1,7 @@
 import React from 'react'
 import uploadImage from '../../assets/images/Upload-video-preview.jpg';
+import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
+
 
 export default function UploadComponent() {
     return (
@@ -10,13 +12,14 @@ export default function UploadComponent() {
             <div className="UploadComponent__yourDesktopContainer">
             <h5 className="UploadComponent__yourVideoTitle">TITLE 
             YOUR VIDEO</h5>
-            <input className="UploadComponent__yourTitleInput" type="text" placeholder="Add a title to your video"/>
+            <input className="UploadComponent__yourTitleInput" type="text" placeholder="Add a title to your video" minLength="8"/>
             <h5 className="UploadComponent__yourVideoDescriptionTitle">ADD A VIDEO DESCRIPTION</h5>
             <textarea className="UploadComponent__yourVideoDetailsInput" type="text" placeholder="Add a description of your video"></textarea>
             </div>
             <div className="UploadComponent__buttonsContainer">
             <button className="UploadComponent__publishButton">PUBLISH</button>
-            <button className="UploadComponent__cancelButton">CANCEL</button>
+            <Link to="/">
+            <button className="UploadComponent__cancelButton">CANCEL</button></Link>
             </div>
         </form>
     )

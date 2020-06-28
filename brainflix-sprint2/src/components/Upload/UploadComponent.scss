@@ -89,6 +89,14 @@ padding: 0 auto;
         width: 35rem;
     }
 }
+&__yourTitleInput:invalid {
+    border: 1.5px solid red;
+    
+}
+
+&__yourTitleInput::placeholder{
+    //
+}
 
 &__yourVideoDescriptionTitle{
     color: #afafaf;
@@ -164,4 +172,10 @@ padding: 0 auto;
         padding-top: 0.3rem;
     }
 }
+&__cancelButton:hover{
+    border: 1.2px solid #0095FF;
+}
+}
+input:active {
+    border: 1.5px solid red;
 }
