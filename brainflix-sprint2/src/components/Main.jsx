@@ -30,7 +30,7 @@ class Main extends React.Component{
     }
    
     componentDidUpdate(prevProps){
-        console.log()
+        console.log(prevProps)
         console.log(this.props)
         if(this.props.match.params.id !== prevProps.match.params.id){
             axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
@@ -48,11 +48,13 @@ class Main extends React.Component{
     return(
         <div>
             <Header logo={logo} mohan={mohan} magGlass={magGlass} upPlus={upPlus}/>
+            
             <MainPlayer mainplay={this.state.mainVideo}/>
             <Description explain={this.state.mainVideo}/>
             {videoComment}
-           
+            <section className="hopefullState">
             <SideVideo sideVids={this.state.data} mainplay={this.state.mainVideo}/>
+            </section>
         </div>
     )
     }

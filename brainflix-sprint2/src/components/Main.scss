@@ -1,4 +1,17 @@
 @import '../styles/appStylz.scss';
 .Main{
     width: 100%;
+    @include desktop{
+        display: flex;
+    }
 }
+.hopefullState{
+    @include desktop{
+    // border: 3px dashed fuchsia;
+    border-left: 1.2px solid #e1e1e1;
+    width: 35%;
+    float: right;
+    margin: -47.8rem 2.4rem 0rem 0rem;
+}
+}
+

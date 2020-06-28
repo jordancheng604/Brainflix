@@ -22,6 +22,9 @@ padding: 0 auto;
     color: #afafaf;
     font-size: 0.8rem;
     margin: 1rem 0rem 0rem 1.5rem;
+    @include tablet{
+        border-top: 1px solid #e1e1e1;
+    }
 }
 
 &__yourVideoImage{
