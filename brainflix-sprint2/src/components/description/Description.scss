@@ -1,6 +1,7 @@
 @import '../../styles/appStylz.scss';
 
-.describe{            
+.describe{    
+    overflow: hidden;        
     display: flex;
     flex-direction: column;
     align-content: center;

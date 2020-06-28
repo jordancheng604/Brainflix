@@ -1,5 +1,6 @@
 @import '../../styles/appStylz.scss';
 .comments{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     @include desktop{
@@ -206,4 +207,7 @@
             font-size: 0.75rem;
             width: 100%;
         }}
+}
+input:active{
+    border: 1.5px solid #0095ff;
 }

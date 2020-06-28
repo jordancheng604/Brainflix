@@ -10,7 +10,7 @@ class App extends React.Component {
     <div> 
       <BrowserRouter>
       <Switch>
-      <Route path='/' exact component={Home}/>
+      <Route exact path='/' component={Home}/>
       <Route path='/Upload' component={Upload}/>
       <Route path='/videos/:id' render={(routeProps)=>{return <Main routeProps={routeProps}/>}}/>
       </Switch>

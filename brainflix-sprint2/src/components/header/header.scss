@@ -1,6 +1,7 @@
 @import '../../styles/appStylz.scss';
 
 .header{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -50,6 +51,7 @@
     &__searchBoxMagGlass{
         background-image: url(../../assets//icons/SVG/Icon-search.svg);
         background-repeat: no-repeat;
+        border: none;
         min-height: 3rem;
         min-width: 3.2rem;
         margin: -10rem 0rem 0rem 1.99rem;

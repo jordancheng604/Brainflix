@@ -9,8 +9,8 @@ import MainPlayer from './main-player/MainPlayer.jsx';
 import Description from './description/Description.jsx';
 import Comments from './comments/Comments.jsx';
 import SideVideo from './side-video/SideVideo.jsx';
-import sideVids from './side-video/SideVideo';
-import appStylz from '../styles/appStylz.scss'
+// import sideVids from './side-video/SideVideo';
+// import appStylz from '../styles/appStylz.scss'
 import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
 
 class Main extends React.Component{
@@ -20,25 +20,37 @@ class Main extends React.Component{
     }        
     async componentDidMount(){
         axios.get('https://project-2-api.herokuapp.com/videos?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
-        .then(res=>{console.log("This is the video array", res.data)
-            this.setState({data: res.data})
-            }
-        )         
+        .then(res=>{this.setState({data: res.data})}
+        ).catch(err=>console.log(err))         
         axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
-        .then(res=>{console.log("This is the Main video", res.data)
-            this.setState({mainVideo: res.data})})
+        .then(res=>{this.setState({mainVideo: res.data})})
     }
    
-    componentDidUpdate(prevProps){
-        console.log(prevProps)
-        console.log(this.props)
+    componentDidUpdate(prevProps, props){
         if(this.props.match.params.id !== prevProps.match.params.id){
             axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
             .then(res=>{
             this.setState({mainVideo: res.data})
         })
             .catch(err=>console.log(err))
-    }}
+    }
+    //console.log();
+        // if(this.props.state == undefined){
+        //     axios
+        //     .get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
+        //     .then(res=>{console.log("This is the MAIN", res.data)
+        //     this.setState({mainVideo: res.data})})
+        //     .catch(err=>console.log(err))
+        // }
+        if(this.props.match.state === "/"){
+            axios
+            .get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
+            .then(res=>{console.log("This is the MAIN", res.data)
+            this.setState({mainVideo: res.data.image})})
+            .catch(err=>console.log(err))
+        }
+
+}
 
     render(){
         let videoComment = "";

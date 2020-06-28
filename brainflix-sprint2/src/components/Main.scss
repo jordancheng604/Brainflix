@@ -1,6 +1,7 @@
 @import '../styles/appStylz.scss';
 .Main{
     width: 100%;
+    overflow: hidden;
     @include desktop{
         display: flex;
     }

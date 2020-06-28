@@ -1,5 +1,4 @@
 import React from 'react';
-import magGlass from '../../assets/icons/PNG/Icon-search.png';
 import { Link } from "react-router-dom";
 
 

@@ -89,10 +89,14 @@ padding: 0 auto;
         width: 35rem;
     }
 }
-&__yourTitleInput:invalid {
-    border: 1.5px solid red;
+// &__yourTitleInput:invalid {
+//     border: 1.5px solid red;
     
-}
+// }
+// &__yourTitleInput:valid {
+//     border: 1.5px solid rgb(31, 255, 31);
+    
+// }
 
 &__yourTitleInput::placeholder{
     //trying to do some stuff here.
