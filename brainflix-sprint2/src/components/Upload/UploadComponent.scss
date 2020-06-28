@@ -14,6 +14,11 @@ padding: 0 auto;
     margin: 1rem 0rem 1rem 0em;
     font-size: 1.5rem;
     font-weight: 800;
+    width: 18.5rem;
+    @include tablet{
+        font-size: 2rem;
+        width: 100%;
+    }
 }
 
 &__videoAreaTitle{
@@ -24,6 +29,8 @@ padding: 0 auto;
     margin: 1rem 0rem 0rem 1.5rem;
     @include tablet{
         border-top: 1px solid #e1e1e1;
+        width:94%;
+        padding: 3rem 0rem 0rem 0rem;
     }
 }
 
@@ -31,7 +38,9 @@ padding: 0 auto;
     width: 18rem;
     border-radius: 5px;
     margin: 0.3rem 0rem 1rem 1.5rem;
-     
+     @include tablet{
+         width: 22rem;
+     }
 }
 
 &__yourVideoTitle{
@@ -48,6 +57,9 @@ padding: 0 auto;
     background-color: #fafafa;
     margin: 0rem 0rem 1rem 1.5rem;
     width: 16rem;
+    @include tablet{
+        width: 88%;
+    }
 }
 
 &__yourVideoDescriptionTitle{
@@ -67,6 +79,22 @@ padding: 0 auto;
     font-family: 'Avenir', 'Roboto', sans-serif;
     color: blue;
     font-weight: 500;
+    @include tablet{
+        width: 90%;
+    }
+}
+
+&__buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 95%;
+        border-top: 1.2px solid #e1e1e1;
+        margin: 1rem 0rem 7rem 1rem;
+        padding: 2rem 0rem 0rem 0rem;
+    }
 }
 
 &__publishButton{
@@ -78,6 +106,10 @@ padding: 0 auto;
     border: none;
     border-radius: 5px;
     font-weight: bolder;
+    @include tablet{
+        width: 10rem;
+        margin: 0.7rem 0rem 0rem 0rem;
+    }
 }
 
 &__cancelButton{
@@ -89,5 +121,12 @@ padding: 0 auto;
     border-radius: 5px;
     font-weight: bolder;
     margin: 1rem 0rem 0rem 1.5rem;
+    // display: flex;
+    // align-self: center;
+    @include tablet{
+        width:10rem;
+        margin:0.7rem 0rem 0rem 0rem;
+        padding-top: 0.3rem;
+    }
 }
 }
