@@ -11,9 +11,10 @@ html{
 }
 .SideVideo{
     @include desktop{
-        float: right;
-        margin: -47.3rem -3rem 0rem 0rem;
+        // float: right;
+        // margin: -47.3rem -3rem 0rem 0rem;
         padding: 2rem 0rem 0rem 0rem;
         border-left: 1.2px solid #e1e1e1;
+        border: 5px dashed fuchsia;
     }
 }

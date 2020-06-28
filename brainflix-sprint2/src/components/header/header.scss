@@ -36,13 +36,15 @@
         @include desktop{
             display: flex;
             justify-self: flex-start;
-            margin: 1.5rem 1rem 1rem 0rem;
+            margin: 1.5rem 1rem 1rem 9rem;
         }
     }
 
     &__searchBoxContainer{
-        // border: 2px solid blue;
         margin: 0;
+        @include desktop{
+            margin: 0.2rem 0rem 0rem -8rem;
+        }
     }
 
     &__searchBoxMagGlass{
@@ -78,8 +80,8 @@
         padding: 1.0rem 0rem 1rem 2rem;
     }
     @include desktop{
-        width: 20rem;
-        padding: 0.8rem;
+        width: 12rem;
+        padding: 0.8rem 0rem 0.8rem 2.1rem;
     }}
     &__rightSide{
         display: flex;

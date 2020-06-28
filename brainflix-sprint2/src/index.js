@@ -11,6 +11,7 @@ import './components/comments/comments.scss';
 import './components/side-video/SideVideo.scss';
 import './components/description/Description.scss';
 import './components/Upload/UploadComponent.scss';
+import './styles/appStylz.scss';
 
 ReactDOM.render(
   <React.StrictMode>

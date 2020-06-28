@@ -10,7 +10,7 @@ import Description from './description/Description.jsx';
 import Comments from './comments/Comments.jsx';
 import SideVideo from './side-video/SideVideo.jsx';
 import sideVids from './side-video/SideVideo';
-// import appStylz from '../styles/appStylz.scss'
+import appStylz from '../styles/appStylz.scss'
 import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
 
 class Main extends React.Component{

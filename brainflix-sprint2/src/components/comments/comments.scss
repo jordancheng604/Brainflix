@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     @include desktop{
-        width: 59.5%;
-        margin: 0rem 0rem 0rem 10rem;
+        width: 50.0%;
+        margin: 0rem 0rem 0rem 8rem;
     }
     &__commStat{
         font-size: 1rem;
@@ -131,8 +131,9 @@
         }
         @include desktop{
             font-size: 0.8rem;
-            width:103.5%;
+            width:50.0%;
             border-bottom: 1.2px solid #e1e1e1;
+            margin: 1rem 0rem 1rem 9rem;
         }}
     &__image2{
         background-color: #e1e1e1;
