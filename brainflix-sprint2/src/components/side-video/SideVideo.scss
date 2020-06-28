@@ -7,6 +7,9 @@ justify-content: center;
 width: 100%;
 list-style: none;
 padding: 0rem;
+@include tablet{
+    // margin-left:2.8rem;
+}
 @include desktop{
     width: 29.5%;
     display: flex;
@@ -23,7 +26,7 @@ padding: 0rem;
     color: #afafaf;
     @include tablet{
         font-size: 0.7rem;
-        margin: 0rem 1rem 2rem 1rem;
+        margin: 2rem 1rem 2rem 1.8rem;
 }}
 &__card{
     width: 100%;
@@ -35,7 +38,7 @@ padding: 0rem;
     flex-direction: row;
     flex-wrap: wrap;
     @include tablet{
-        margin: 0rem 1rem 0rem 1rem;
+        margin: 0rem 1rem 0rem 1.8rem;
         height: 5.8rem;
     }}
 &__image{
