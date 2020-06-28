@@ -11,7 +11,7 @@
     @include tablet {
         display: flex;
         flex-direction: row;
-        height: 4.9rem;
+        height: 4.2rem;
     }
     @include desktop {
         display: flex;
@@ -31,7 +31,7 @@
             display: flex;
             justify-self: start;
             align-self: start;
-            margin: 1.5rem 0rem 0rem -5.5rem;
+            margin: 1.5rem 0rem 0rem 1.5rem;
         }
         @include desktop{
             display: flex;
@@ -52,6 +52,10 @@
         min-width: 3.2rem;
         margin: -10rem 0rem 0rem 1.99rem;
         padding: -10rem 0rem 0rem 1rem;
+        @include tablet{
+            padding: 0rem 0rem 0rem -2rem;
+            margin: -2.3rem 0rem 0rem 0.7rem;
+        }
         }
 
     &__textSearchBox{
@@ -69,9 +73,9 @@
     background-image: "../../../assets/icons/PNG/Icon-search.png";
     background-position: center;
     @include tablet{
-        margin: 0.6rem 0rem 0rem 0rem;
-        width: 30rem;
-        padding: 1.0rem;
+        margin: 0.8rem 0rem 0rem 0rem;
+        width: 13.0rem;
+        padding: 1.0rem 0rem 1rem 2rem;
     }
     @include desktop{
         width: 20rem;

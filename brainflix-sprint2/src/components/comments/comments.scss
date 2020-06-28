@@ -126,6 +126,8 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            width: 95%;
+            margin: 1rem 0rem 1rem 1.7rem;
         }
         @include desktop{
             font-size: 0.8rem;
