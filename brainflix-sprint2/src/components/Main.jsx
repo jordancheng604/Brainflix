@@ -41,7 +41,9 @@ class Main extends React.Component{
         }
 
 }
-
+componentWillUnmount(){
+    
+}
     render(){
         let videoComment = "";
         if (this.state.mainVideo.comments!==undefined){
