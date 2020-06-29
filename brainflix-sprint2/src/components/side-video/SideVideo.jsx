@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, withRouter } from "react-router-dom";
-import { render } from '@testing-library/react';
-import MainPlayer from '../main-player/MainPlayer';
-
 
 class SideVideo extends React.Component {  
 render() {
@@ -22,7 +19,5 @@ render() {
         </li>
         </Link>
         )})}
-        </>)
-}}
-        
+        </>)}}
         export default withRouter(SideVideo);

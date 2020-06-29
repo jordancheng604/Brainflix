@@ -1,7 +1,5 @@
 import React from 'react';
-import { Component } from 'react';
-import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
-import SideVideo from '../side-video/SideVideo';
+import {withRouter} from "react-router-dom";
 
 function MainPlayer ({mainplay}) {
     return(

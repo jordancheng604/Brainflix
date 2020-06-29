@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import mohan from '../../assets/images/mohan.jpg';
 import moment from 'moment';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
-import { func } from 'prop-types';
-import PostComment from '../PostComment/PostComment';
 
-function Comments({commentsSection}, PostComment){
+function Comments({commentsSection}){
     return(
         <div>
         <div className="comments">    

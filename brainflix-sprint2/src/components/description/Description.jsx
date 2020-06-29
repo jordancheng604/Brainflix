@@ -1,7 +1,7 @@
 import React from 'react';
 import eyeView from '../../assets/icons/PNG/Icon-views.png';
 import heartLike from '../../assets/icons/PNG/Icon-likes.png';
-import { BrowserRouter, Route, Switch, Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import moment from 'moment';
 
 function Description({explain}) {

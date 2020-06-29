@@ -30,8 +30,6 @@ export default class PostComment extends React.Component {
 
     }
 
-
-
     render(){
     return (
         <div>

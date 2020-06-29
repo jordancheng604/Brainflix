@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 import Header from './header/Header';
 import logo from '../logo.svg';
@@ -9,9 +9,7 @@ import MainPlayer from './main-player/MainPlayer.jsx';
 import Description from './description/Description.jsx';
 import Comments from './comments/Comments.jsx';
 import SideVideo from './side-video/SideVideo.jsx';
-// import sideVids from './side-video/SideVideo';
-// import appStylz from '../styles/appStylz.scss'
-import { BrowserRouter, Route, withRouter, Switch, Link } from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
 class Main extends React.Component{
     state = {
@@ -25,25 +23,18 @@ class Main extends React.Component{
         axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
         .then(res=>{this.setState({mainVideo: res.data})})
     }
-   
     componentDidUpdate(prevProps){
         if(this.props.match.params.id !== prevProps.match.params.id){
             axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
             .then(res=>{
             this.setState({mainVideo: res.data})
         })
-            .catch(err=>console.log(err))
-    }
+            .catch(err=>console.log(err))}
         if(this.props.match.path === '/'  ){
             axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
             .then(res=>{this.setState({mainVideo: res.data})})
             .catch(err=>console.log(err))
-        }
-
-}
-componentWillUnmount(){
-
-}
+        }}
     render(){
         let videoComment = "";
         if (this.state.mainVideo.comments!==undefined){
@@ -52,7 +43,6 @@ componentWillUnmount(){
     return(
         <div>
             <Header logo={logo} mohan={mohan} magGlass={magGlass} upPlus={upPlus}/>
-            
             <MainPlayer mainplay={this.state.mainVideo}/>
             <Description explain={this.state.mainVideo}/>
             {videoComment}
@@ -63,5 +53,4 @@ componentWillUnmount(){
     )
     }
 }
-
 export default withRouter(Main);
