@@ -85,6 +85,10 @@
         width: 12rem;
         padding: 0.8rem 0rem 0.8rem 2.1rem;
     }}
+    &__textSearchBox:focus{
+        outline: none;
+        border: 1.5px solid #0095ff;
+    }
     &__rightSide{
         display: flex;
         align-self: center;

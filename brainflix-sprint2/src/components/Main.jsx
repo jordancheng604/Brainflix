@@ -34,19 +34,9 @@ class Main extends React.Component{
         })
             .catch(err=>console.log(err))
     }
-    //console.log();
-        // if(this.props.state == undefined){
-        //     axios
-        //     .get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
-        //     .then(res=>{console.log("This is the MAIN", res.data)
-        //     this.setState({mainVideo: res.data})})
-        //     .catch(err=>console.log(err))
-        // }
-        if(this.props.match.state === "/"){
-            axios
-            .get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
-            .then(res=>{console.log("This is the MAIN", res.data)
-            this.setState({mainVideo: res.data.image})})
+        if(this.props.match.path === '/'  ){
+            axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
+            .then(res=>{this.setState({mainVideo: res.data})})
             .catch(err=>console.log(err))
         }
 
