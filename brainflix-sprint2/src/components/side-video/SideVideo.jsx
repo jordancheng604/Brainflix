@@ -3,7 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 import { render } from '@testing-library/react';
 import MainPlayer from '../main-player/MainPlayer';
 
-//add link to each card. and then do componentdidupdate , checking params.
 
 class SideVideo extends React.Component {  
 render() {

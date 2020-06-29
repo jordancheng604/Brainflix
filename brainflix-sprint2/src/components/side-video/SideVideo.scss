@@ -8,15 +8,11 @@ justify-content: center;
 width: 100%;
 list-style: none;
 padding: 0rem;
-@include tablet{
-    // margin-left:2.8rem;
-}
 @include desktop{
     width: 29.5%;
     display: flex;
     align-self: flex-end;
     justify-self: flex-end;
-    // border: 5px dashed fuchsia;
 }
 &__sectionTitle{
     margin: 2.5rem 1rem 2.5rem 1rem;
@@ -39,6 +35,9 @@ padding: 0rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    &:hover{
+        border-bottom: 1px solid lightskyblue;
+    }
     @include tablet{
         margin: 0rem 1rem 0rem 1.8rem;
         height: 5.8rem;

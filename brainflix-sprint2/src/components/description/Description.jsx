@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Switch, Link, withRouter } from "react-router-dom
 import moment from 'moment';
 
 function Description({explain}) {
-    
     return(
         <section className="describe">
             <div><h1 className='describe__title' key={explain.id}>

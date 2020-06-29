@@ -26,7 +26,7 @@ class Main extends React.Component{
         .then(res=>{this.setState({mainVideo: res.data})})
     }
    
-    componentDidUpdate(prevProps, props){
+    componentDidUpdate(prevProps){
         if(this.props.match.params.id !== prevProps.match.params.id){
             axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
             .then(res=>{
@@ -42,7 +42,7 @@ class Main extends React.Component{
 
 }
 componentWillUnmount(){
-    
+
 }
     render(){
         let videoComment = "";

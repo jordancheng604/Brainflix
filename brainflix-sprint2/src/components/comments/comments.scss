@@ -1,6 +1,5 @@
 @import '../../styles/appStylz.scss';
 .comments{
-    // overflow: hidden;
     display: flex;
     flex-direction: column;
     @include tablet{
@@ -192,8 +191,6 @@
         justify-self: flex-end;
         height: 1rem;
         width: 35%;
-        //text-align: right;
-        //border: 1px dashed fuchsia;
     }
     &__commMent{
         width: 75%;

@@ -7,7 +7,6 @@ flex-direction: column;
 align-content: center;
 margin: 0 auto;
 padding: 0 auto;
-
 &__sectionTitle{
     border-top: 1px solid #e1e1e1;
     padding: 1.8rem 0rem 1rem 1.5rem;
@@ -26,7 +25,6 @@ padding: 0 auto;
         padding: 2rem 0rem 1rem 9rem;
     }
 }
-
 &__videoAreaTitle{
     display: flex;
     align-self: center;
@@ -44,7 +42,6 @@ padding: 0 auto;
         width: 75%;
     }
 }
-
 &__yourVideoImage{
     width: 18rem;
     border-radius: 5px;
@@ -58,7 +55,6 @@ padding: 0 auto;
          border-radius: 5px;
      }
 }
-
 &__yourDesktopContainer{
     @include desktop{
         display: flex;
@@ -67,14 +63,12 @@ padding: 0 auto;
 
     }
 }
-
 &__yourVideoTitle{
     color: #afafaf;
     font-size: 0.8rem;
     font-weight: 700;
     margin: 1rem 0rem 0.3rem 1.5rem;
 }
-
 &__yourTitleInput{
     padding: 1rem 1rem 1rem 0.8rem;
     border:1px solid #e1e1e1;
@@ -93,17 +87,11 @@ padding: 0 auto;
         outline: none;
         border: 1.5px solid #0095ff;
     }
-
-// &__yourTitleInput::placeholder{
-// color: red;
-// }
-
 &__yourVideoDescriptionTitle{
     color: #afafaf;
     margin: 0rem 0rem 0rem 1.5rem;
     font-size: 0.8rem;
 }
-
 &__yourVideoDetailsInput{
     padding: 0.8rem 0rem 6.2rem 0.8rem;
     margin: 0rem 0rem 2rem 1.5rem;
@@ -122,13 +110,10 @@ padding: 0 auto;
         width: 36rem;
     }
 }
-
-
 &__yourVideoDetailsInput:focus{
     outline: none;
     border: 1.5px solid #0095ff;
 }
-
 &__buttonsContainer{
     display: flex;
     flex-direction: column;
@@ -145,7 +130,6 @@ padding: 0 auto;
         margin: 1rem 0rem 7rem 9rem;
     }
 }
-
 &__publishButton{
     width: 18rem;
     margin: 0.5rem 0rem 0rem 1.5rem;
@@ -160,7 +144,6 @@ padding: 0 auto;
         margin: 0.7rem 0rem 0rem 0rem;
     }
 }
-
 &__cancelButton{
     width: 18rem;
     height: 2.5rem;
@@ -170,8 +153,6 @@ padding: 0 auto;
     border-radius: 5px;
     font-weight: bolder;
     margin: 1rem 0rem 0rem 1.5rem;
-    // display: flex;
-    // align-self: center;
     @include tablet{
         width:10rem;
         margin:0.7rem 0rem 0rem 0rem;
@@ -181,7 +162,4 @@ padding: 0 auto;
 &__cancelButton:hover{
     border: 1.2px solid #0095FF;
 }
-}
-input:active {
-    border: 1.5px solid red;
 }
