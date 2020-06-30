@@ -1,0 +1,17 @@
+@import './Partials//mixins';
+@import './Partials//typography';
+@import './Partials//variables';
+
+html{
+    font-weight: normal;
+    font-family: "Avenir", "Roboto", sans-serif;
+}
+.header{
+    width: 100%;
+}
+.SideVideo{
+    @include desktop{
+        padding: 2rem 0rem 0rem 0rem;
+        border-left: 1.2px solid #e1e1e1;
+    }
+}
