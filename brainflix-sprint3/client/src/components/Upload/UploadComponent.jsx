@@ -16,7 +16,11 @@ export default function UploadComponent() {
             <textarea className="UploadComponent__yourVideoDetailsInput" type="text" placeholder="Add a description of your video"></textarea>
             </div>
             <div className="UploadComponent__buttonsContainer">
+
             <button className="UploadComponent__publishButton">PUBLISH</button>
+                {/* event handler for upload submission. upload the form. */}
+
+
             <Link to="/">
             <button className="UploadComponent__cancelButton">CANCEL</button></Link>
             </div>
