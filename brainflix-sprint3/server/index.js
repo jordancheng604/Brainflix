@@ -15,6 +15,8 @@ const data = require('./Data/data.json');
 //You need error codes.
 //Error 404: json{"message": "There is no video with that id."}
 //TeaPot error:
+//What about status codes? 200??
+
 
 //Routes:
 // /get`/videos`
@@ -23,16 +25,30 @@ app.get('/', (req,res)=>{
     res.send("Hi there and Welcome to BF-Sprint 3")
 })
 
-app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3.'));
+app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3 (Jordan Cheng).'));
 
 app.get('/videos', (req,res)=>{
     //console.log(data.json);
     //res.send(data.json);
-    res.json(data)
+    res.json(data.forEach((data)=>{
+        data
+        
+        //data.id;
+        //data.title;
+    
+    }))
 })//data.json file to send. test and see if it works.
-//so when a call is made to "/videos"; return should only be: ***id, title, channel, and image***.
+//so when a call is made to "/videos"; return should only be consisting of: ***id, title, channel, and image***.
+//(()=>{})
 
 
+
+//THIS one will slice out 1 piece of data from the data.json array.
+// app.get('/videos', (req,res)=>{
+//     //console.log(data.json);
+//     //res.send(data.json);
+//     res.json(data.slice(0,1))
+// })
 
 
 
