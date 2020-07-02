@@ -17,6 +17,8 @@ class Main extends React.Component{
         mainVideo: {}
     }        
     async componentDidMount(){
+        //https://project-2-api.herokuapp.com/videos?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c
+        //http://localhost:8080/videos
         axios.get('https://project-2-api.herokuapp.com/videos?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
         .then(res=>{this.setState({data: res.data})}
         ).catch(err=>console.log(err))         

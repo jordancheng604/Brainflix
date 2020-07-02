@@ -22,21 +22,52 @@ const data = require('./Data/data.json');
 // /get`/videos`
 
 app.get('/', (req,res)=>{
-    res.send("Hi there and Welcome to BF-Sprint 3")
+    res.send("Hi there and Welcome to BrainFlix Sprint3")
 })
 
-app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3 (Jordan Cheng).'));
+app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3 by Jordan Cheng.'));
 
+
+//Hoping to return a list of videos for the SIDE VIDEO LIST call-request. MUST BE AN ARRAY OF THE VIDEOS!!!
 app.get('/videos', (req,res)=>{
     //console.log(data.json);
-    //res.send(data.json);
-    res.json(data.forEach((data)=>{
-        data
-        
+
+let hopefullVideoList = (data)=>{
+    data.map().foreach((data)=>{
+        return(
+            hopefullVideoList(data.id)
+        )
+    })
+}
+    res.json(hopefullVideoList)
+    //res.send(data);
+    //(data)=>{
+        //data.id
         //data.id;
         //data.title;
-    
-    }))
+        //}
+// data.forEach((showTheData)=>{TheData(showTheData)});
+// TheData=(showTheData)=>{
+//     res.json(showTheData.id)
+
+// }
+// const videoArray = (data)=>{
+//     data.slice().forEach(()=>{
+//         data.id
+//     })
+// }
+// res.send(videoArray)
+
+// res.json(data.slice())
+//     res.json(data.slice().forEach(()=>{
+//         return(
+//             data.id
+            
+//         )
+//     }))
+    // res.json(data.slice().forEach( (data)=> {
+    //     ()=>{data.id}
+    // }));
 })//data.json file to send. test and see if it works.
 //so when a call is made to "/videos"; return should only be consisting of: ***id, title, channel, and image***.
 //(()=>{})
@@ -52,9 +83,20 @@ app.get('/videos', (req,res)=>{
 
 
 
-
-app.get('/videos/:id', (req,res)=>{
-    res.json(data)
+//This is for sending the single video and its data when using the MainVideoPlayer. MUST BE AN OBJECT!!!
+app.get('/videos/`${id}`', (req,res)=>{
+    res.send(data.slice(()=>{data.id,1}))
+    //res.send(data.slice(`data.${data.id}`,1))
     //.channel.image.description.views.likes.timestamp.comments
 })
-//When someone calls with an "":id"; return is the entire package for that one video: ***id, title, channel, image, descriptin, views, likes, timestamp, comments, 
+//When someone calls with an "":id"; return is the entire "package" for that one video: ***id, title, channel, image, descriptin, views, likes, timestamp, comments, 
+
+
+
+
+
+//For receiving a POST, a UPLOAD VIDEO.
+app.post('/upload', (req,res)=>{
+    upload.push(data)
+    return res.status(201);
+})
