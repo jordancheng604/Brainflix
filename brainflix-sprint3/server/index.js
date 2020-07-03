@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const data = require('./Data/data.json');
+const cors = require('cors');
 
 //FUNCTIONAL  REQUIREMENTS: API SERVER.
 //1. The end-points and response structure of your API server must match that of the mock API server.
@@ -16,7 +17,7 @@ const data = require('./Data/data.json');
 //Error 404: json{"message": "There is no video with that id."}
 //TeaPot error:
 //What about status codes? 200??
-
+app.use(cors())
 
 //Routes:
 // /get`/videos`
@@ -28,67 +29,38 @@ app.get('/', (req,res)=>{
 app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3 by Jordan Cheng.'));
 
 
-//Hoping to return a list of videos for the SIDE VIDEO LIST call-request. MUST BE AN ARRAY OF THE VIDEOS!!!
-app.get('/videos', (req,res)=>{
+
+app.get('/videos', (_req,res)=>{
     //console.log(data.json);
+res.json(data.smallVideoList)
 
-let hopefullVideoList = (data)=>{
-    data.map().foreach((data)=>{
-        return(
-            hopefullVideoList(data.id)
-        )
-    })
-}
-    res.json(hopefullVideoList)
-    //res.send(data);
-    //(data)=>{
-        //data.id
-        //data.id;
-        //data.title;
-        //}
-// data.forEach((showTheData)=>{TheData(showTheData)});
-// TheData=(showTheData)=>{
-//     res.json(showTheData.id)
-
-// }
-// const videoArray = (data)=>{
-//     data.slice().forEach(()=>{
-//         data.id
+})
+//This is for sending the single video and its data when using the MainVideoPlayer. MUST BE AN OBJECT!!!
+// function hopefullMiddleware(req, res, next){
+//     getVideoData(req.params.id)
+//     .then(function(data){
+//         req.videoData = data
+//         next()
+//     })
+//     .catch(function (error) {
+//         res.status(400).end()
 //     })
 // }
-// res.send(videoArray)
-
-// res.json(data.slice())
-//     res.json(data.slice().forEach(()=>{
-//         return(
-//             data.id
-            
-//         )
-//     }))
-    // res.json(data.slice().forEach( (data)=> {
-    //     ()=>{data.id}
-    // }));
-})//data.json file to send. test and see if it works.
-//so when a call is made to "/videos"; return should only be consisting of: ***id, title, channel, and image***.
-//(()=>{})
+    
+// app.get('/videos/`${video.id}`', [hopefullMiddleware])
 
 
-
-//THIS one will slice out 1 piece of data from the data.json array.
-// app.get('/videos', (req,res)=>{
-//     //console.log(data.json);
-//     //res.send(data.json);
-//     res.json(data.slice(0,1))
-// })
-
-
-
-//This is for sending the single video and its data when using the MainVideoPlayer. MUST BE AN OBJECT!!!
-app.get('/videos/`${id}`', (req,res)=>{
-    res.send(data.slice(()=>{data.id,1}))
+app.get('/videos/:id', (req,res)=>{
+res.send(data.bigVideoList.filter(singleVideo=>(singleVideo.id === req.params.id)))
+    //res.send(data.bigVideoList.slice(videoData=>{videoData.id}))
+   
+    //(vidData=()=>{vidData.id})
     //res.send(data.slice(`data.${data.id}`,1))
     //.channel.image.description.views.likes.timestamp.comments
-})
+
+    })
+
+
 //When someone calls with an "":id"; return is the entire "package" for that one video: ***id, title, channel, image, descriptin, views, likes, timestamp, comments, 
 
 
@@ -96,6 +68,11 @@ app.get('/videos/`${id}`', (req,res)=>{
 
 
 //For receiving a POST, a UPLOAD VIDEO.
+//will take the thumbnail image; from the frontend
+
+//uploadcomponent --image something seomthing. rec.body data
+//image
+
 app.post('/upload', (req,res)=>{
     upload.push(data)
     return res.status(201);
