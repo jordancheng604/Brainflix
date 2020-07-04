@@ -1,8 +1,23 @@
-import React from 'react'
+import React, {Component} from 'react'
 import uploadImage from '../../assets/images/Upload-video-preview.jpg';
 import { Link } from "react-router-dom";
+import Axios from 'axios';
+import { render } from '@testing-library/react';
 
-export default function UploadComponent() {
+export default class UploadComponent extends Component {
+state= {
+    title: "",
+    description: ""
+}
+
+
+
+    // const newVideo = (e)=>{ Axios.post('http://localhost:8080/upload',
+    // {title: e.target.input.value,
+    // description: e.target.textarea.value,})
+    // console.log(newVideo)
+    //}
+render(){
     return (
         <form>
             <h1 className="UploadComponent__sectionTitle">Upload Video</h1>
@@ -17,7 +32,8 @@ export default function UploadComponent() {
             </div>
             <div className="UploadComponent__buttonsContainer">
 
-            <button className="UploadComponent__publishButton">PUBLISH</button>
+            {/* //<button onSubmit={newVideo} className="UploadComponent__publishButton">PUBLISH</button> */}
+            <button onSubmit={""} className="UploadComponent__publishButton">PUBLISH</button>
                 {/* event handler for upload submission. upload the form. */}
 
 
@@ -26,4 +42,5 @@ export default function UploadComponent() {
             </div>
         </form>
     )
+}
 }

@@ -4,7 +4,6 @@ const uuid = require('uuid');
 const app = express();
 const data = require('./Data/data.json');
 const cors = require('cors');
-const uploadImage = ('./assets/Upload-video-preview.jpg');
 
 
 app.use(cors())
@@ -24,7 +23,26 @@ app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix 
 //Get Side Videos List:
 app.get('/videos', (_req,res)=>{
     //console.log(data.json);
-     res.json(data.smallVideoList)
+    const sideList = data.map(sideVids=>{
+        const varObject = {}
+         //return()
+         varObject.id = sideVids.id, 
+         varObject.title = sideVids.title,
+         varObject.channel = sideVids.channel,
+         varObject.image = sideVids.image
+         return varObject 
+
+      }  
+     
+      )
+    
+      res.send(sideList)
+
+    
+}
+
+)
+    //res.json(data.smallVideoList)
     // const sideVideoList= data.bigVideoList.map(sideVids=(sideVid)=>{
         
     //         sideVid.id
@@ -38,7 +56,7 @@ app.get('/videos', (_req,res)=>{
     // res.json(sideVideoList);
     // console.log(sideVideoList);
     //res.send(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}));
-})
+
 //This is for sending the single video and its data when using the MainVideoPlayer. MUST BE AN OBJECT!!!
 // function hopefullMiddleware(req, res, next){
 //     getVideoData(req.params.id)
@@ -55,12 +73,14 @@ app.get('/videos', (_req,res)=>{
 
 //Get single video.
 app.get('/videos/:id', (req,res)=>{
+    res.send(data.find(oneVideo=>(oneVideo.id === req.params.id)));
+    //res.json(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}));
     //res.json(data.bigVideoList)
    //const findVideo =  data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}
         
         //)
         
-    res.send(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}))
+    //res.send(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}))
 // const findVideo = data.bigVideoList(singleVideo=>{singleVideo.id === req.params.id});
 
 // if (findVideo){
@@ -75,11 +95,6 @@ app.get('/videos/:id', (req,res)=>{
     //.channel.image.description.views.likes.timestamp.comments
 
     });
-
-
-//When someone calls with an "":id"; return is the entire "package" for that one video: ***id, title, channel, image, descriptin, views, likes, timestamp, comments, 
-
-
 
 
 
@@ -97,7 +112,7 @@ app.post('/upload', (req,res)=>{
         id: uuid.v4(),
         title: req.body.title,
         channel: "BrainStation Mohan",
-        image: uploadImage,
+        image: req.body.image,
         description: req.body.description,
         views: "2,345,870",
         likes: "1,435,630",
@@ -133,8 +148,9 @@ app.post('/upload', (req,res)=>{
        return res.status(400).json({msg: 'Please check that you have filled in a Title and Description.'})
    }
 
-   data.bigVideoList.push(newVideo);
-   res.json(data.bigVideoList);
+   data.unshift(newVideo);
+   //data.smallVideoList.unshift(newVideo);
+   res.json(data);
     // const newVideo = {
     //     id: uuid(),
     //     title: req.body.name,
