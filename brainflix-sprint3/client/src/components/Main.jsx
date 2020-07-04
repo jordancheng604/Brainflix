@@ -31,13 +31,15 @@ class Main extends React.Component{
     }
     componentDidUpdate(prevProps){
         if(this.props.match.params.id !== prevProps.match.params.id){
-            axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
+            axios.get('http://localhost:8080/videos/:id')
+            //axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
             .then(res=>{
             this.setState({mainVideo: res.data})
         })
             .catch(err=>console.log(err))}
         if(this.props.match.path === '/'  ){
-            axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
+            axios.get('http://localhost:8080/videos/1af0jruup5gu')
+            //axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
             .then(res=>{this.setState({mainVideo: res.data})})
             .catch(err=>console.log(err))
         }}
