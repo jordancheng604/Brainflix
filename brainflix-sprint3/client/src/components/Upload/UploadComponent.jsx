@@ -4,36 +4,62 @@ import { Link } from "react-router-dom";
 import Axios from 'axios';
 import { render } from '@testing-library/react';
 
-export default class UploadComponent extends Component {
+class UploadComponent extends Component {
+
 state= {
     title: "",
-    description: ""
+    description: "",
+    image: uploadImage
+    // {uploadImage}
+};
+
+formSubmit = e =>{
+    e.preventDefault();
+    
+    const newNewVideo = {
+        title: this.state.titleName,
+        description: this.state.clientVideoDescription
+    }
+
+    // const newNewVideo = {}
+    //     newNewVideo.title = formSubmit.title,
+    //     newNewVideo.description = formSubmit.description,
+    //     newNewVideo.image = {uploadImage}
+    
+    Axios.post('http://localhost:8080/upload', {newNewVideo})
+    .then(res=>{console.log("axios post"+res); console.log("axios post with data" + res.data)})
+
+    console.log("New Video Upload:" + newNewVideo);
 }
 
+submitting=e=>{
+    this.setState({titleName: e.target.value, clientVideoDescription: e.target.value})
+    console.log("Submitting:" + this.submitting)
+    console.log(this.submitting)
+}
 
-
-    // const newVideo = (e)=>{ Axios.post('http://localhost:8080/upload',
+    //const newVideo = (e)=>{ Axios.post('http://localhost:8080/upload',)}
     // {title: e.target.input.value,
     // description: e.target.textarea.value,})
     // console.log(newVideo)
     //}
 render(){
     return (
-        <form>
+        <form onSubmit={this.formSubmit}>
             <h1 className="UploadComponent__sectionTitle">Upload Video</h1>
             <h5 className="UploadComponent__videoAreaTitle">VIDEO THUMBNAIL</h5>
             <img className="UploadComponent__yourVideoImage" src={uploadImage} alt=""/>
             <div className="UploadComponent__yourDesktopContainer">
             <h5 className="UploadComponent__yourVideoTitle">TITLE 
             YOUR VIDEO</h5>
-            <input className="UploadComponent__yourTitleInput" type="text" placeholder="Add a title to your video"/>
+            <input name="titleName" onChange={this.submitting} className="UploadComponent__yourTitleInput" type="text" placeholder="Add a title to your video"/>
             <h5 className="UploadComponent__yourVideoDescriptionTitle">ADD A VIDEO DESCRIPTION</h5>
-            <textarea className="UploadComponent__yourVideoDetailsInput" type="text" placeholder="Add a description of your video"></textarea>
+            <textarea name="clientVideoDescription" onChange={this.submitting}className="UploadComponent__yourVideoDetailsInput" type="text" placeholder="Add a description of your video"></textarea>
             </div>
             <div className="UploadComponent__buttonsContainer">
 
             {/* //<button onSubmit={newVideo} className="UploadComponent__publishButton">PUBLISH</button> */}
-            <button onSubmit={""} className="UploadComponent__publishButton">PUBLISH</button>
+            <button className="UploadComponent__publishButton">PUBLISH</button>
                 {/* event handler for upload submission. upload the form. */}
 
 
@@ -44,3 +70,4 @@ render(){
     )
 }
 }
+export default UploadComponent;

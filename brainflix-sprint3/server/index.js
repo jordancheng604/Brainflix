@@ -10,8 +10,6 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-//Routes:
-// /get`/videos`
 
 app.get('/', (req,res)=>{
     res.send("Hi there and Welcome to BrainFlix Sprint3")
@@ -22,10 +20,8 @@ app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix 
 
 //Get Side Videos List:
 app.get('/videos', (_req,res)=>{
-    //console.log(data.json);
     const sideList = data.map(sideVids=>{
         const varObject = {}
-         //return()
          varObject.id = sideVids.id, 
          varObject.title = sideVids.title,
          varObject.channel = sideVids.channel,
@@ -42,57 +38,11 @@ app.get('/videos', (_req,res)=>{
 }
 
 )
-    //res.json(data.smallVideoList)
-    // const sideVideoList= data.bigVideoList.map(sideVids=(sideVid)=>{
-        
-    //         sideVid.id
-    //         // bigVideoList.title,
-    //         // bigVideoList.channel,
-    //         // bigVideoList.image
-        
-    //
-
-    // })
-    // res.json(sideVideoList);
-    // console.log(sideVideoList);
-    //res.send(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}));
-
-//This is for sending the single video and its data when using the MainVideoPlayer. MUST BE AN OBJECT!!!
-// function hopefullMiddleware(req, res, next){
-//     getVideoData(req.params.id)
-//     .then(function(data){
-//         req.videoData = data
-//         next()
-//     })
-//     .catch(function (error) {
-//         res.status(400).end()
-//     })
-// }
-    
-// app.get('/videos/`${video.id}`', [hopefullMiddleware])
-
-//Get single video.
+   
+//Get single video by ID.
 app.get('/videos/:id', (req,res)=>{
     res.send(data.find(oneVideo=>(oneVideo.id === req.params.id)));
-    //res.json(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}));
-    //res.json(data.bigVideoList)
-   //const findVideo =  data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}
-        
-        //)
-        
-    //res.send(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}))
-// const findVideo = data.bigVideoList(singleVideo=>{singleVideo.id === req.params.id});
-
-// if (findVideo){
-//     res.send(data.bigVideoList.filter(singleVideo=>{singleVideo.id === req.params.id}));
-// }else{
-//     res.status(400).json({message: 'Nothing found, please double check your inputs(Video ID).'});
-// }
-    //res.send(data.bigVideoList.slice(videoData=>{videoData.id}))
-   
-    //(vidData=()=>{vidData.id})
-    //res.send(data.slice(`data.${data.id}`,1))
-    //.channel.image.description.views.likes.timestamp.comments
+    iption.views.likes.timestamp.comments
 
     });
 
