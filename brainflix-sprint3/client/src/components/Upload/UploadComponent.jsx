@@ -17,9 +17,9 @@ formSubmit = e =>{
     e.preventDefault();
 
     const newNewVideo ={
-    "title": "",
-    "description": "",
-    "image": "https://picsum.photos/200"
+    title: "",
+    description: "",
+    image: "https://picsum.photos/200"
     }
     console.log(newNewVideo);
     // const newNewVideo = {
@@ -40,12 +40,15 @@ formSubmit = e =>{
 }
 
 submitting=(e)=>{
-    console.log("title "
-    + e.target.value)
-    console.log("2nd one " + e.target.value)
+    // console.log("title "
+    // + e.target.value)
+    // console.log("2nd one " + e.target.value)
     
-    this.setState({titleName: e.target.value, clientVideoDescription: e.target.value})
-    
+    this.setState({titleName: e.target.value});
+    this.setState({clientVideoDescription: e.target.value});
+    console.log({titleName: e.target.value});
+    console.log({clientVideoDescription: e.target.value});
+
     const newSubmit= this.state
 
 
@@ -80,7 +83,7 @@ render(){
             YOUR VIDEO</h5>
             <input name="titleName" onChange={this.submitting} className="UploadComponent__yourTitleInput" type="text" placeholder="Add a title to your video"/>
             <h5 className="UploadComponent__yourVideoDescriptionTitle">ADD A VIDEO DESCRIPTION</h5>
-            <textarea name="clientVideoDescription" onChange={this.submitting}className="UploadComponent__yourVideoDetailsInput" type="text" placeholder="Add a description of your video"></textarea>
+            <textarea name="clientVideoDescription" onChange={this.submitting} className="UploadComponent__yourVideoDetailsInput" type="text" placeholder="Add a description of your video"></textarea>
             </div>
             <div className="UploadComponent__buttonsContainer">
 
