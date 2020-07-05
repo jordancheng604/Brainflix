@@ -96,10 +96,12 @@ app.post('/upload', (req,res)=>{
    
    if(!newVideo.title || ! newVideo.description){
        return res.status(400).json({msg: 'Please check that you have filled in a Title and Description.'})
+
    }
 
    data.unshift(newVideo);
    //data.smallVideoList.unshift(newVideo);
+   console.log(data);
    res.json(data);
     // const newVideo = {
     //     id: uuid(),

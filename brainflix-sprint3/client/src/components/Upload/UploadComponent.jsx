@@ -2,40 +2,66 @@ import React, {Component} from 'react'
 import uploadImage from '../../assets/images/Upload-video-preview.jpg';
 import { Link } from "react-router-dom";
 import Axios from 'axios';
-import { render } from '@testing-library/react';
+//import { render } from '@testing-library/react';
 
 class UploadComponent extends Component {
 
 state= {
     title: "",
     description: "",
-    image: uploadImage
+    //image: uploadImage
     // {uploadImage}
 };
 
 formSubmit = e =>{
     e.preventDefault();
-    
-    const newNewVideo = {
-        title: this.state.titleName,
-        description: this.state.clientVideoDescription
+
+    const newNewVideo ={
+    "title": "",
+    "description": "",
+    "image": "https://picsum.photos/200"
     }
+    console.log(newNewVideo);
+    // const newNewVideo = {
+    //     title: this.state.titleName,
+    //     description: this.state.clientVideoDescription
+    // }
 
     // const newNewVideo = {}
     //     newNewVideo.title = formSubmit.title,
     //     newNewVideo.description = formSubmit.description,
     //     newNewVideo.image = {uploadImage}
     
-    Axios.post('http://localhost:8080/upload', {newNewVideo})
-    .then(res=>{console.log("axios post"+res); console.log("axios post with data" + res.data)})
+    // Axios.post('http://localhost:8080/upload', newNewVideo)
+    // .then(res=>{console.log("axios post"+res); 
+    // console.log("axios post with data" + res.data)})
 
-    console.log("New Video Upload:" + newNewVideo);
+    // console.log("New Video Upload:" + newNewVideo);
 }
 
-submitting=e=>{
+submitting=(e)=>{
+    console.log("title "
+    + e.target.value)
+    console.log("2nd one " + e.target.value)
+    
     this.setState({titleName: e.target.value, clientVideoDescription: e.target.value})
-    console.log("Submitting:" + this.submitting)
-    console.log(this.submitting)
+    
+    const newSubmit= this.state
+
+
+    // Axios.post('http://localhost:8080/upload', {
+    // "title": e.target.value,
+    // "description": e.clientVideoDescription.value
+
+    // })
+    // .then(res=>{console.log("axios post"+res); 
+    // console.log("axios post with data" + res.data)})
+
+
+
+    //console.log("New Video Upload:" + newNewVideo);
+    //console.log("Submitting:" + this.submitting)
+    //console.log(this.submitting)
 }
 
     //const newVideo = (e)=>{ Axios.post('http://localhost:8080/upload',)}
