@@ -11,15 +11,16 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 
-app.get('/', (req,res)=>{
+app.get('/', (req,res,next)=>{
     res.send("Hi there and Welcome to BrainFlix Sprint3")
+    next()
 })
 
 app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3 by Jordan Cheng.'));
 
 
 //Get Side Videos List:
-app.get('/videos', (_req,res)=>{
+app.get('/videos', (_req,res,next)=>{
     const sideList = data.map(sideVids=>{
         const varObject = {}
          varObject.id = sideVids.id, 
@@ -34,17 +35,20 @@ app.get('/videos', (_req,res)=>{
     
       res.send(sideList)
 
+    next()
     
 }
 
 )
    
 //Get single video by ID.
-app.get('/videos/:id', (req,res)=>{
+app.get('/videos/:id', (req,res,next)=>{
     res.send(data.find(oneVideo=>(oneVideo.id === req.params.id)));
-    iption.views.likes.timestamp.comments
-
-    });
+    //iption.views.likes.timestamp.comments
+    next()
+    }
+    
+    );
 
 
 
