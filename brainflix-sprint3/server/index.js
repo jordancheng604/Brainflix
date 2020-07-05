@@ -59,7 +59,7 @@ app.get('/videos/:id', (req,res,next)=>{
 //image
 
 //Receive and Post.
-app.post('/upload', (req,res)=>{
+app.post('/videos', (req,res)=>{
    //res.send(req.body);
 
    const newVideo = {

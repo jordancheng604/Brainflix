@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import uploadImage from '../../assets/images/Upload-video-preview.jpg';
-import { Link } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 import Axios from 'axios';
 //import { render } from '@testing-library/react';
 
@@ -15,10 +15,14 @@ this.state= {
 this.submitting=this.submitting.bind(this);
 
 this.formSubmit=e=>{
-    e.preventDefault()
-    Axios.post('http://localhost:8080/upload', this.state)
+    e.preventDefault();
+    e.target.reset();
+    Axios.post('http://localhost:8080/videos', this.state)
     .then(res=>{console.log("axios post"+res); 
     console.log("axios post with data" + res.data)})
+    
+   // return <withRouter exact path to='/'/>
+    
 }
 
 }
@@ -91,6 +95,10 @@ submitting=(e)=>{
     // console.log(newVideo)
     //}
 render(){
+    // const goHome = this.state.goHome;
+    // if(goHome === true){
+    //     return <Redirect to='/'/>
+    // }
     return (
        <form onSubmit={this.formSubmit}>
             {/* <form> */}

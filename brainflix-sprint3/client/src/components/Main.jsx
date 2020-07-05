@@ -39,13 +39,13 @@ class Main extends React.Component{
         })
             .catch(err=>console.log(err))}
             
-        if(this.props.match.path === '/'  ){
-            axios.get('http://localhost:8080/videos/1af0jruup5gu')
-            // axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
+        if(this.props.match.path === '/' && prevProps !== this.props ){
+            axios.get('http://localhost:8080/videos/1af0jruup5gu', console.log("axios.get call for '/'"))
             .then(res=>{this.setState({mainVideo: res.data})})
             .catch(err=>console.log(err))
         }
     }
+    // axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
     render(){
         let videoComment = "";
         if (this.state.mainVideo.comments!==undefined){
