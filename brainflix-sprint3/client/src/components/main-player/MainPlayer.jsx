@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from "react-router-dom";
+import playButton from "../../assets/icons/SVG/Icon-play.svg"
 
 function MainPlayer ({mainplay}) {
     return(
@@ -8,6 +9,8 @@ function MainPlayer ({mainplay}) {
             <source src="" type=""></source>
             </video>
             <div className='mainPlayer__controls'>
+                {/* <img className='mainPlayer__playButton' src={playButton} alt=""/>
+                <div className='mainPlayer__playButtDiv'></div> */}
             <span className='mainPlayer__rightSide'> 
             <span className='mainPlayer__fullScreen'></span>
             <span className='mainPlayer__volume'></span>

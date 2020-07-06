@@ -11,12 +11,14 @@ import Comments from './comments/Comments.jsx';
 import SideVideo from './side-video/SideVideo.jsx';
 import {withRouter} from "react-router-dom";
 
+let thisThing = "1af0jruup5gu";
+
 class Main extends React.Component{
     state = {
         data: [],
         mainVideo: {}
     }        
-    async componentDidMount(){
+    async componentDidMount(props){
         //https://project-2-api.herokuapp.com/videos?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c
         //http://localhost:8080/videos
         axios.get('http://localhost:8080/videos')
@@ -26,8 +28,22 @@ class Main extends React.Component{
                 this.setState({data: res.data})}
         ).catch(err=>console.log(err))         
 
-        axios.get('http://localhost:8080/videos/1af0jruup5gu')
-        .then(res=>{this.setState({mainVideo: res.data})})
+        // console.log("cDmount" + {props})
+            console.log(this.props)
+            console.log(this.props.match.params.id)
+        if(thisThing !== this.props.match.params.id){
+            if(this.props.match.params.id === undefined){
+                this.props.match.params.id = thisThing
+            }
+
+            console.log(thisThing);
+            
+            
+                //'http://localhost:8080/videos/1af0jruup5gu' || '/'
+            axios.get('http://localhost:8080/videos/1af0jruup5gu')
+            .then(res=>{this.setState({mainVideo: res.data})})
+        }
+        
         //https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c
     }
     componentDidUpdate(prevProps){
@@ -44,6 +60,13 @@ class Main extends React.Component{
             .then(res=>{this.setState({mainVideo: res.data})})
             .catch(err=>console.log(err))
         }
+
+        // if(onload.this.props.match.path.params. == `http://localhost:8080/` || this.props.path.params === `http://localhost:8080/videos/${this.props.match.params.id}`){
+        //     axios.get(`http://localhost:8080/videos/${this.props.match.params.id}`)
+        //     .then(
+        //         res=>{this.setState({mainVideo: res.data})}
+        //     )
+        // }
     }
     // axios.get('https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c')
     render(){
