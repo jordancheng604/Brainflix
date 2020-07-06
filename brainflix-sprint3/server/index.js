@@ -7,14 +7,12 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-
-app.get('/', (req,res,next)=>{
+app.get('/', (_req,res,next)=>{
     res.send("Hi there and Welcome to BrainFlix Sprint3")
     next()
 })
 
 app.listen(8080, ()=> console.info('You are running on Port:8080 with BrainFlix Sprint3 by Jordan Cheng.'));
-
 
 //Get Side Videos List:
 app.get('/videos', (_req,res,next)=>{
@@ -25,30 +23,17 @@ app.get('/videos', (_req,res,next)=>{
          varObject.channel = sideVids.channel,
          varObject.image = sideVids.image
          return varObject 
-
-      }  
-     
-      )
-    
+      })
       res.send(sideList)
-
     next()
-    
-}
-
-)
+})
    
 //Get single video by ID.
 app.get('/videos/:id', (req,res,next)=>{
     res.send(data.find(oneVideo=>(oneVideo.id === req.params.id)));
     next()
-    }
-    
-    );
+    });
 
-
-
-//For receiving a POST, a UPLOAD VIDEO.
 //Receive and Post.
 app.post('/videos', (req,res)=>{
    const newVideo = {
@@ -84,13 +69,10 @@ app.post('/videos', (req,res)=>{
                         "likes": 0,
                         "timestamp": 1542262984046,
                     },
-                ]
-   }
+                ]}
    
    if(!newVideo.title || ! newVideo.description){
-       return res.status(400).json({msg: 'Please check that you have filled in a Title and Description.'})
-   }
+       return res.status(400).json({msg: 'Please check that you have filled in a Title and Description.'})}
    data.unshift(newVideo);
-   console.log(data);
    res.json(data);
 })
