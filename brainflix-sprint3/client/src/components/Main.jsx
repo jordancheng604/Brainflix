@@ -12,6 +12,7 @@ import SideVideo from './side-video/SideVideo.jsx';
 import {withRouter} from "react-router-dom";
 
 let thisThing = "1af0jruup5gu";
+let globalVar = "";
 
 class Main extends React.Component{
     state = {
@@ -29,8 +30,8 @@ class Main extends React.Component{
         ).catch(err=>console.log(err))         
 
         // console.log("cDmount" + {props})
-            console.log(this.props)
-            console.log(this.props.match.params.id)
+            console.log("main video info: " , this.props)
+            console.log("main video ID thisThing: " , this.props.match.params.id)
         if(thisThing !== this.props.match.params.id){
             if(this.props.match.params.id === undefined){
                 this.props.match.params.id = thisThing
@@ -38,16 +39,21 @@ class Main extends React.Component{
 
             console.log(thisThing);
             
-            
+            globalVar = this.props.match.params.id
+            console.log("globalVar: " , globalVar)
                 //'http://localhost:8080/videos/1af0jruup5gu' || '/'
-            axios.get('http://localhost:8080/videos/1af0jruup5gu')
+            axios.get(`http://localhost:8080/videos/${globalVar}`)
             .then(res=>{this.setState({mainVideo: res.data})})
         }
         
         //https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c
     }
     componentDidUpdate(prevProps){
+        console.log("prevprops" + prevProps);
         if(this.props.match.params.id !== prevProps.match.params.id){
+            if(this.props.match.params.id === undefined){
+                this.props.match.params.id = "1af0jruup5gu"
+            }console.log("DidUpdate ID: " + this.props.match.params.id)
             axios.get(`http://localhost:8080/videos/${this.props.match.params.id}`)
             // axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=d7b6e3df-722d-45bd-af02-c582050fee5c`)
             .then(res=>{
@@ -55,11 +61,13 @@ class Main extends React.Component{
         })
             .catch(err=>console.log(err))}
             
-        if(this.props.match.path === '/' && prevProps !== this.props ){
-            axios.get('http://localhost:8080/videos/1af0jruup5gu', console.log("axios.get call for '/'"))
-            .then(res=>{this.setState({mainVideo: res.data})})
-            .catch(err=>console.log(err))
-        }
+        // if(this.props.match.path === '/' && prevProps !== this.props ){
+        //     axios.get('http://localhost:8080/videos/1af0jruup5gu', console.log("axios.get call for '/'"))
+        //     .then(res=>{this.setState({mainVideo: res.data})})
+        //     .catch(err=>console.log(err))
+        // }
+
+
 
         // if(onload.this.props.match.path.params. == `http://localhost:8080/` || this.props.path.params === `http://localhost:8080/videos/${this.props.match.params.id}`){
         //     axios.get(`http://localhost:8080/videos/${this.props.match.params.id}`)
