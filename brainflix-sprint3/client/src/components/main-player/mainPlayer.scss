@@ -22,17 +22,18 @@
     &__controls{
         display:flex;
         flex-direction: row;
-        width: 18rem;
+        width: 35rem;
         height: 2.5rem;
-        background-color: lightsalmon;
-        margin: -7rem 0rem 0rem 0rem;
+        background-color:  rgba(0, 0, 0, 0.7);
+        margin: -5rem 0rem 0rem 10rem;
+        
     }
     &__playButton{
-        width: 5rem;
-        height: 5rem;
+        width: 2rem;
+        height: 2rem;
         border: 3px dotted lightskyblue;
         background-color: rgba(0, 0, 0, 0.8);
-        margin: -2rem 0rem 1rem 10rem;
+        margin: 0rem 0rem 0rem 0rem;
     }
     &__playButtDiv{
         background-image: url("../../assets/icons/SVG/Icon-play.svg");
@@ -44,7 +45,7 @@
         margin: -3rem 0rem 1rem 10rem;   
     }
     &__scrub{
-        width: 5rem;
+        width: 15rem;
         height: 5rem;
         border: 3px dotted lightskyblue;
         background-color: rgba(0, 0, 0, 0.8);
