@@ -60,6 +60,5 @@ class Main extends React.Component{
             </section>
         </div>
     )
-    }
-}
+    }}
 export default withRouter(Main);
