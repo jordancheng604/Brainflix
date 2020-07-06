@@ -12,12 +12,13 @@ function MainPlayer ({mainplay}) {
             <source src="" type=""></source>
             </video>
             <div className='mainPlayer__controls'>
-                <div>
-                <img className='mainPlayer__playButton' src={playButton} alt=""/>
-                </div>
-                <span>
-                    <img className='mainPlayer__scrub' src={scrubber} alt=""/>
-                </span>
+            <div>
+            <img className='mainPlayer__playButton' src={playButton} alt=""/>
+            </div>
+            <hr className='mainPlayer__scrubBar'/>
+            <span>
+            <img className='mainPlayer__scrub' src={scrubber} alt=""/>
+            </span>
             <span className='mainPlayer__rightSide'> 
             <span className='mainPlayer__fullScreen'>
             <img className='mainPlayer__fullscreenIMG' src={fullscreen} alt=""/>
